@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задача 5</title>
+    <script src="./js/task5.js"></script>
+</head>
+
+<body>
+    <h3>Задача 5.</h3>
+    <p> Дано кількість секунд, що пройшла від початку доби. Визначити скільки це годин і хвилин.</p>
+
+    <script>
+        // Ввод необхідних даних
+        let quantityOfSeconds = parseInt(prompt(`Введіть загальну кількість секунд`, '6500'))
+
+        //Знаходимо результати
+
+        //------------------------Знаходимо години
+        let hours = quantityOfSeconds / 3600
+        //Виводимо ціле число
+        let integerHours = Math.floor(hours)
+
+        //------------------------Знаходимо хвилини
+        let minuts = quantityOfSeconds / 60
+        //Рахуємо кількість хвилин в цілих годинах
+        let minutsInHours = integerHours * 60
+        //Знаходимо кількість хвилин
+        let integerMinuts = minuts - minutsInHours
+        //Виводимо ціле число
+        let resoultMinuts = integerMinuts
+
+        //------------------------Знаходимо секунди
+        let secondsWithoutHoursAndMinuts = ((integerHours * 60) * 60) + (resoultMinuts * 60)
+        let seconds = quantityOfSeconds - secondsWithoutHoursAndMinuts
+
+        //------------------------Вивід результату
+        document.write(`<h2>Результат:</h2>`)
+        document.write(`<h3>${integerHours} час(а/ов), ${resoultMinuts.toFixed(0)} минут, ${seconds} секунд,</h3>`)
+
+        // Не можу зрозуміти чому іноді виходять від'ємні секунди
+    </script>
+    Не можу зрозуміти чому іноді виходять від'ємні секунди
+    <!-- <script>
+        // Ввод необхідних даних
+        let quantityOfSeconds = parseInt(prompt(`Введіть загальну кількість секунд`, '1200'))
+
+        //Знаходимо результати
+        let minuts = 1 / 60 * quantityOfSeconds
+        let hours = 1 / 3600 * quantityOfSeconds
+
+        document.write(`<h2>Вхідні:</h2>`)
+        document.write(`Введенна кількість секунд - ${quantityOfSeconds} <br>`)
+
+        document.write(`<h2>Результат:</h2>`)
+        document.write(`Хвилин - ${minuts.toFixed(1)} <br>`)
+        document.write(`Часів - ${hours.toFixed(1)} <br>`)
+
+
+
+    </script> -->
+</body>
+
+</html>

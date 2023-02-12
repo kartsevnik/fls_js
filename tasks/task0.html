@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задача 0</title>
+    <script src="./js/task0.js"></script>
+</head>
+
+<body>
+    <h3>Задача 0.</h3>
+    <p> Обчислити значення виразів</p>
+    <p> S1=a+12+b</p>
+    <p> S2=√ a+b/2a </p>
+    <p> S3=3√ (a+b)c </p>
+    <p> S4=sin⁡(a-b) </p>
+
+    <script>
+        // Ввод необхідних даних
+        let a = parseInt(prompt('Введіть ціле число а', '2'))
+        let b = parseInt(prompt('Введіть ціле число b', '4'))
+        let c = parseInt(prompt('Введіть ціле число c', '6'))
+
+        //Знаходимо результат s1
+
+        let s1 = a + 12 + b
+
+        //Знаходимо результат s2
+
+        let numerator = a + b
+        let denominator = 2 * a
+        let resultFraction = numerator / denominator
+        let s2 = Math.sqrt(resultFraction)
+
+        //Знаходимо результат s3
+
+        let summInBrackets = a + b
+        let resultCalculation = summInBrackets * c
+        let s3 = Math.cbrt(resultCalculation)
+
+        //Знаходимо результат s4
+        let resultInBrackets = a - b
+        let s4 = Math.sin(resultInBrackets)
+
+        // Вивід вхідних
+        document.write(`<h2>Вхідні:</h2>`)
+        document.write(`a = ${a} <br>`)
+        document.write(`b = ${b} <br>`)
+        document.write(`c = ${c} <br>`)
+
+        // Вивід результатів
+        document.write(`<h2>Результати:</h2>`)
+        document.write(`S1 = ${s1} <br>`)
+        document.write(`S2 = ${s2} <br>`)
+        document.write(`S3 = ${s3} <br>`)
+        document.write(`S4 = ${s4} <br>`)
+
+
+
+    </script>
+</body>
+
+</html>

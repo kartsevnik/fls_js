@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задача 6</title>
+    <script src="./js/task6.js"></script>
+</head>
+
+<body>
+    <h3>Задача 6.</h3>
+    <p>
+        З клавіатури вводяться вартість товару та кількість одиниць 3 товарів. Обчислити вартість кожного товару
+        окремо та загальну вартість. Вивести чек (як у супермаркеті) використовуючи елементи розмітки.
+    </p>
+
+    <script>
+        // Ввод необхідних даних
+        let priceOfProduct1 = parseFloat(prompt('Вартість 1 товару?', '12.5 грн.'))
+        let quantityOfProduct1 = parseFloat(prompt('Яка кількість 1 товару?', '105'))
+
+        let priceOfProduct2 = parseFloat(prompt('Вартість 2 товару?', '15.15 грн.'))
+        let quantityOfProduct2 = parseFloat(prompt('Яка кількість 2 товару?', '15'))
+
+        let priceOfProduct3 = parseFloat(prompt('Вартість 3 товару?', '20.52 грн.'))
+        let quantityOfProduct3 = parseFloat(prompt('Яка кількість 3 товару?', '53'))
+
+        //Знаходимо результати
+
+        let sumOfProduct1 = priceOfProduct1 * quantityOfProduct1
+        let sumOfProduct2 = priceOfProduct2 * quantityOfProduct2
+        let sumOfProduct3 = priceOfProduct3 * quantityOfProduct3
+
+        let totalSumOfProducts = sumOfProduct1 + sumOfProduct2 + sumOfProduct3
+
+        // Вивід вхідних
+
+        document.write(`<h2>Результат:</h2>`)
+
+        document.write(`
+<table style="border: #000 solid 1px; padding: 10px;">
+    <tr>
+        <td>Назва</td>
+        <td>Ціна</td>
+        <td>Сума</td>
+    </tr>
+    <tr>
+        <td style="border: #000 solid 1px;">1 Продукт</td>
+        <td style="border: #000 solid 1px;">${priceOfProduct1}</td>
+        <td style="border: #000 solid 1px;">${sumOfProduct1}</td>
+    </tr>
+    <tr>
+        <td style="border: #000 solid 1px;">2 Продукт</td>
+        <td style="border: #000 solid 1px;">${priceOfProduct2}</td>
+        <td style="border: #000 solid 1px;">${sumOfProduct2}</td>
+    </tr>
+    <tr>
+        <td style="border: #000 solid 1px;">3 Продукт</td>
+        <td style="border: #000 solid 1px;">${priceOfProduct3}</td>
+        <td style="border: #000 solid 1px;">${sumOfProduct3}</td>
+    </tr>
+    <tr>
+        <td>Всього:</td>
+        <td>${totalSumOfProducts}</td>
+    </tr>
+
+</table>
+`
+        )
+    </script>
+</body>
+
+</html>

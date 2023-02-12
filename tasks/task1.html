@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задача 1</title>
+    <script src="./js/task1.js"></script>
+</head>
+
+<body>
+    <h3>Задача 1.</h3>
+    <p> Знайти суму, добуток та частку двох дійсних чисел. Результат вивести у формі таблиці</p>
+
+    <script>
+        // Ввод необхідних даних
+        let a = parseFloat(prompt("Введіть дійсне число a", '10'))
+        let b = parseFloat(prompt("Введіть дійсне число b", '20'))
+
+        //Знаходимо результати
+        let sum = a + b
+        let multiplication = a * b
+        let division = a / b
+
+        // Вивід вхідних
+        document.write(`<h2>Вхідні:</h2>`)
+        document.write(`a = ${a} <br>`)
+        document.write(`b = ${b} <br>`)
+
+
+        // Вивід результатів
+        document.write(`<h2>Результат:</h2>`)
+
+        document.write(`
+<table style="border: #000 solid 1px; padding: 10px;">
+    <tr>
+        <td>Сума</td>
+        <td>Добуток</td>
+        <td>Частка</td>
+    </tr>
+    <tr>
+        <td style="border: #000 solid 1px;">${sum}</td>
+        <td style="border: #000 solid 1px;">${multiplication}</td>
+        <td style="border: #000 solid 1px;">${division}</td>
+    </tr>
+
+</table>
+`
+        )
+    </script>
+</body>
+
+</html>

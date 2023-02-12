@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задача 4</title>
+    <script src="./js/task4.js"></script>
+</head>
+
+<body>
+    <h3>Задача 4.</h3>
+    <p> Дано довжину у сантиметрах. Визначати скільки це метрів і кілометрів.</p>
+
+    <script>
+        // Ввод необхідних даних
+        let centimeter = parseInt(prompt(`Ну шо там? Скіки в тебе сантиметрів?`))
+
+        //Знаходимо результати
+        let metr = centimeter / 100
+        let kilometr = centimeter / 100000
+
+        // Вивід вхідних
+        document.write(`<h2>Вхідні:</h2>`)
+        document.write(`Введенна кількість сантиметрів - ${centimeter} <br>`)
+        // Вивід результату
+        document.write(`<h2>Результат:</h2>`)
+        document.write(`Метрів - ${metr} <br>`)
+        document.write(`Кілометрів - ${kilometr} <br>`)
+    </script>
+</body>
+
+</html>
