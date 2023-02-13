@@ -37,20 +37,25 @@
         </main>
         <script>
             // Ввод необхідних даних
+            let displayWidth = window.innerWidth
+            console.log(displayWidth);
+            let quantityOfElements = parseInt(prompt('Введіть кількість елементів', '14'))
+            let widthOfElements = parseInt(prompt('Введіть ширину елементів', '20'))
 
+            //Знаходимо  результати
 
-            //Знаходимо проміжкові результати
+            let sumOfWidthElements = quantityOfElements * widthOfElements
 
+            let result = displayWidth / sumOfWidthElements
 
-            //Знаходимо остаточні результати
 
 
 
 
             // Вивід вхідних
-            document.write(`<div class="js-output"><h2>Вхідні:</h2><p>Випадковий місяць - ${randomMonth} </p> <p>Випадковий день (від 0 до 6) - ${randomDay}  </p></div>`)
+            document.write(`<div class="js-output"><h2>Вхідні:</h2><p>Ширина вашого екрану дорівнює- ${displayWidth} px </p> <p>Визначена кількість елементів - ${quantityOfElements} шт</p> <p>Ширина 1 елементу - ${widthOfElements} px</p></div>`)
             // Вивід результату
-            document.write(`<div class="js-output"><h2>Результат:</h2><h2>Сума випадкового місяця та дня - ${sumRandomMonthAndDay}</h2></div>`)
+            document.write(`<div class="js-output"><h2>Результат:</h2><h2>На екрані поміститься - ${result.toFixed(0)} елементів</h2></div>`)
         </script>
     </div>
 
