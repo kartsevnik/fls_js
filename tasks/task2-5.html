@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задача 5</title>
+    <script src="./js/task5.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+
+            <div class="header__menu">
+                <ul class="menu">
+                    <li class="menu__link"><a href="../index.html">HOME</a></li>
+                    <li class="menu__link"><a href="https://edu.fls.guru/js.html">Course JS from FLS</a></li>
+
+                    <li class="menu__link"> <a href="https://github.com/kartsevnik/">Github: kartsevnik </a></li>
+                    <li class="menu__link">Discord: eMKey#2306</a></li>
+                </ul>
+
+            </div>
+
+        </header>
+        <main class="main-task">
+
+            <h3>Задача 5.</h3>
+            <p> Дано кількість секунд, що пройшла від початку доби. Визначити скільки це годин і хвилин.</p>
+
+
+        </main>
+        <script>
+            // Ввод необхідних даних
+            let quantityOfSeconds = parseInt(prompt(`Введіть загальну кількість секунд`, '6500'))
+
+            //Знаходимо результати
+
+            //------------------------Знаходимо години
+            let hours = quantityOfSeconds / 3600
+            //Виводимо ціле число
+            let integerHours = Math.floor(hours)
+
+            //------------------------Знаходимо хвилини
+            let minuts = quantityOfSeconds / 60
+            //Рахуємо кількість хвилин в цілих годинах
+            let minutsInHours = integerHours * 60
+            //Знаходимо кількість хвилин
+            let integerMinuts = minuts - minutsInHours
+            //Виводимо ціле число
+            let resoultMinuts = integerMinuts
+
+            //------------------------Знаходимо секунди
+            let secondsWithoutHoursAndMinuts = ((integerHours * 60) * 60) + (resoultMinuts * 60)
+            let seconds = quantityOfSeconds - secondsWithoutHoursAndMinuts
+
+            //------------------------Вивід результату
+            document.write(`<div class="js-output"><h2>Результат:</h2><h3>${integerHours} час(а/ов), ${resoultMinuts.toFixed(0)} минут, ${seconds} секунд,</h3></div>`)
+
+
+            // Не можу зрозуміти чому іноді виходять від'ємні секунди
+        </script>
+        <p>*Не можу зрозуміти чому іноді виходять від'ємні секунди</p>
+
+    </div>
+
+
+
+
+</body>
+
+</html>
