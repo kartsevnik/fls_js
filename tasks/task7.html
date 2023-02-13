@@ -7,34 +7,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Задача 7</title>
     <script src="./js/task7.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
-    <h3>Задача 7.</h3>
-    <p> Знайти суму випадкового номера місяця (від 1 до 12) та випадкового номера дня (від 0 до 6).</p>
+    <div class="wrapper">
+        <header class="header">
+
+            <div class="header__menu">
+                <ul class="menu">
+                    <li class="menu__link"><a href="../index.html">HOME</a></li>
+                    <li class="menu__link"><a href="https://edu.fls.guru/js.html">Course JS from FLS</a></li>
+
+                    <li class="menu__link"> <a href="https://github.com/kartsevnik/">Github: kartsevnik </a></li>
+                    <li class="menu__link">Discord: eMKey#2306</a></li>
+                </ul>
+
+            </div>
+
+        </header>
+        <main class="main-task">
+
+            <h3>Задача 7.</h3>
+            <p> Знайти суму випадкового номера місяця (від 1 до 12) та випадкового номера дня (від 0 до 6).</p>
 
 
-    <script>
-        // Ввод необхідних даних
-        let minMonth = 1, maxMonth = 12
-        let minDay = 0, maxDay = 6
 
-        //Знаходимо проміжкові результати
-        let randomMonth = minMonth + Math.floor(Math.random() * (maxMonth - minMonth + 1))
-        let randomDay = minDay + Math.floor(Math.random() * (maxDay - minDay))
+        </main>
+        <script>
+            // Ввод необхідних даних
+            let minMonth = 1, maxMonth = 12
+            let minDay = 0, maxDay = 6
 
-        //Знаходимо остаточні результати
-        let sumRandomMonthAndDay = randomMonth + randomDay
+            //Знаходимо проміжкові результати
+            let randomMonth = minMonth + Math.floor(Math.random() * (maxMonth - minMonth + 1))
+            let randomDay = minDay + Math.floor(Math.random() * (maxDay - minDay))
 
-        // Вивід вхідних
-        document.write(`<h2>Вхідні:</h2>`)
-        document.write(`Випадковий місяць - ${randomMonth} <br>`)
-        document.write(`Випадковий день (від 0 до 6) - ${randomDay} <br>`)
+            //Знаходимо остаточні результати
+            let sumRandomMonthAndDay = randomMonth + randomDay
 
-        // Вивід результату
-        document.write(`<h2>Результат:</h2>`)
-        document.write(`Сума випадкового місяця та дня - ${sumRandomMonthAndDay} <br>`)
-    </script>
+
+
+            // Вивід вхідних
+            document.write(`<div class="js-output"><h2>Вхідні:</h2><p>Випадковий місяць - ${randomMonth} </p> <p>Випадковий день (від 0 до 6) - ${randomDay}  </p></div>`)
+            // Вивід результату
+            document.write(`<div class="js-output"><h2>Результат:</h2><h2>Сума випадкового місяця та дня - ${sumRandomMonthAndDay}</h2></div>`)
+        </script>
+    </div>
 
 </body>
 

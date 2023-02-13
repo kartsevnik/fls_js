@@ -7,33 +7,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Задача 1</title>
     <script src="./js/task1.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
-    <h3>Задача 1.</h3>
-    <p> Знайти суму, добуток та частку двох дійсних чисел. Результат вивести у формі таблиці</p>
+    <div class="wrapper">
+        <header class="header">
 
-    <script>
-        // Ввод необхідних даних
-        let a = parseFloat(prompt("Введіть дійсне число a", '10'))
-        let b = parseFloat(prompt("Введіть дійсне число b", '20'))
+            <div class="header__menu">
+                <ul class="menu">
+                    <li class="menu__link"><a href="../index.html">HOME</a></li>
+                    <li class="menu__link"><a href="https://edu.fls.guru/js.html">Course JS from FLS</a></li>
 
-        //Знаходимо результати
-        let sum = a + b
-        let multiplication = a * b
-        let division = a / b
+                    <li class="menu__link"> <a href="https://github.com/kartsevnik/">Github: kartsevnik </a></li>
+                    <li class="menu__link">Discord: eMKey#2306</a></li>
+                </ul>
 
-        // Вивід вхідних
-        document.write(`<h2>Вхідні:</h2>`)
-        document.write(`a = ${a} <br>`)
-        document.write(`b = ${b} <br>`)
+            </div>
+
+        </header>
+        <main class="main-task">
+
+            <h3>Задача 1.</h3>
+            <p> Знайти суму, добуток та частку двох дійсних чисел. Результат вивести у формі таблиці</p>
+        </main>
+        <script>
+            // Ввод необхідних даних
+            let a = parseFloat(prompt("Введіть дійсне число a", '10'))
+            let b = parseFloat(prompt("Введіть дійсне число b", '20'))
+
+            //Знаходимо результати
+            let sum = a + b
+            let multiplication = a * b
+            let division = a / b
+
+            // Вивід вхідних
+            document.write(`<div class="js-output"><h2>Вхідні:</h2> <p>a = ${a} </p> <p>a = ${b} </p></div>`)
 
 
-        // Вивід результатів
-        document.write(`<h2>Результат:</h2>`)
 
-        document.write(`
-<table style="border: #000 solid 1px; padding: 10px;">
+            // Вивід результатів
+            document.write(`<div class="js-output"><h2>Результат:</h2></div>`)
+
+            document.write(`
+<table class="js-table">
     <tr>
         <td>Сума</td>
         <td>Добуток</td>
@@ -47,8 +64,9 @@
 
 </table>
 `
-        )
-    </script>
+            )
+        </script>
+    </div>
 </body>
 
 </html>

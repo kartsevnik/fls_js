@@ -48,7 +48,7 @@ a {
 
 a:link,
 a:visited {
-    /* text-decoration: none; */ 
+    /* text-decoration: none; */
 }
 
 a:hover {
@@ -93,6 +93,21 @@ h6 {
     padding: 50px;
 }
 
+.js-output {
+    text-align: center;
+    font-size: 20px;
+}
+
+.js-output:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.js-table {
+    align-self: center;
+    border: #000 solid 1px;
+    padding: 10px;
+}
+
 
 /* ====================================== */
 
@@ -115,6 +130,22 @@ h6 {
 
 
 .main {}
+
+.main-task {
+    padding: 30px 0;
+    /* transform: translate(50%); */
+    text-align: center;
+}
+
+.main-task h3 {
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.main-task p {
+    padding: 10px 0;
+}
+
 
 .links-hometask {
     display: flex;
