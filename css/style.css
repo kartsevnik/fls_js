@@ -1,4 +1,4 @@
-/* Обнуление */
+/* null */
 * {
     padding: 0px;
     margin: 0px;
@@ -52,7 +52,8 @@ a:visited {
 }
 
 a:hover {
-    /* text-decoration: none; */
+    color: #00C4F0;
+    transition: all 0.3s ease 0s;
 }
 
 ul li {
@@ -92,12 +93,8 @@ h6 {
     padding: 50px;
 }
 
-/* Код */
 
-a:hover {
-    color: #00C4F0;
-    transition: all 0.3s ease 0s;
-}
+/* ====================================== */
 
 .header {}
 
@@ -114,11 +111,7 @@ a:hover {
 .menu__link {}
 
 
-.header-information p {
-    color: #00C4F0;
-}
-
-
+/* ====================================== */
 
 
 .main {}
@@ -143,7 +136,7 @@ a:hover {
     background: #2A2A2A;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.47);
     border-radius: 29px;
-    padding: 50px 50px;
+    padding: 25px;
     max-width: 270px;
 }
 
@@ -159,6 +152,16 @@ a:hover {
     text-align: center;
     font-size: 25px;
     padding: 10px 0;
+
+}
+
+.hometask-link__text {
+    text-align: center;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.01em;
+    color: #FFFFFF;
 }
 
 .footer {}
