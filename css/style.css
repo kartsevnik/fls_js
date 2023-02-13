@@ -1,0 +1,153 @@
+/* Обнуление */
+* {
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    min-width: 380px;
+}
+
+body {
+    color: #636060;
+    line-height: 1;
+    font-family: "Inter";
+    font-size: 1rem;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+input,
+button,
+textarea {
+    font-family: "Inter";
+    font-size: inherit;
+}
+
+button {
+    cursor: pointer;
+    color: inherit;
+    background-color: inherit;
+}
+
+a {
+    color: inherit;
+}
+
+a:link,
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: inherit;
+    font-size: inherit;
+}
+
+.lock body {
+    /*   overflow: hidden;
+    touch-action: none; */
+}
+
+
+.wrapper {
+    background: linear-gradient(130.68deg, #414141 0%, #2D2D2D 100.52%);
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    color: white;
+}
+
+[class*=__container] {
+    padding: 50px;
+}
+
+/* Код */
+
+a {}
+
+.header {}
+
+.header-information {
+    color: #E4E4E4;
+
+    font-size: 20px;
+    padding: 50px;
+}
+
+.header-information p {
+    color: #00C4F0;
+}
+
+
+
+
+.main {}
+
+.links-hometask {
+    display: flex;
+    gap: 25px;
+}
+
+.links-hometask__container {}
+
+.links-hometask__title {
+    text-align: center;
+    padding: 25px 0;
+    font-size: 40px;
+
+}
+
+.hometask-link {
+    background: #2A2A2A;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.47);
+    border-radius: 29px;
+    padding: 50px 50px;
+    max-width: 270px;
+}
+
+
+.hometask-link__image {
+
+    text-align: center;
+    padding: 15px;
+
+}
+
+.hometask-link__title {
+    text-align: center;
+    font-size: 25px;
+    padding: 10px 0;
+}
+
+.footer {}
