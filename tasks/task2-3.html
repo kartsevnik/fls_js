@@ -36,15 +36,15 @@
         </main>
         <script>
             // Ввод необхідних даних
-            let cost = parseFloat(prompt(`По чому в Одесі руберойд?`))
-            let remains = parseFloat(prompt(`А скіки ще є?`))
+            let cost = parseFloat(prompt(`По чому в Одесі руберойд?`, '130.50 грн.'))
+            let remains = parseFloat(prompt(`А скіки ще є?`, '1403 шт.'))
 
             //Знаходимо результати
             let sumOfProduct = cost * remains
             let procent5 = sumOfProduct * 0.05
 
             // Вивід вхідних
-            document.write(`<div class="js-output"><h2>Вхідні:</h2><p>Рубероїд коштує - ${cost} </p> <p>Залишок - ${remains} </p></div>`)
+            document.write(`<div class="js-output"><h2>Вхідні:</h2><p>Рубероїд коштує - ${cost} грн.</p>  <p>Залишок - ${remains} шт. </p></div>`)
             // Вивід результату
             document.write(`<div class="js-output"><h2>Результат:</h2><h2>Якщо хочете купити все, тоді з вас ${sumOfProduct.toFixed(2)} грн., з яких ${procent5.toFixed(2)} грн. ПДВ 5%</h2></div>`)
 
