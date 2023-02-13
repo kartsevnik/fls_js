@@ -116,7 +116,7 @@ a {}
 
 .links-hometask {
     display: flex;
-    gap: 25px;
+    gap: 24px;
 }
 
 .links-hometask__container {}
