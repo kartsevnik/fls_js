@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Additional Task 8</title>
+    <script src="./js/task7.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+
+            <div class="header__menu">
+                <ul class="menu">
+                    <li class="menu__link"><a href="../index.html">HOME</a></li>
+                    <li class="menu__link"><a href="https://edu.fls.guru/js.html">Course JS from FLS</a></li>
+
+                    <li class="menu__link"> <a href="https://github.com/kartsevnik/">Github: kartsevnik </a></li>
+                    <li class="menu__link">Discord: eMKey#2306</a></li>
+                </ul>
+
+            </div>
+
+        </header>
+        <main class="main-task">
+
+            <h3>Additional Task 8.</h3>
+
+            <!-- <p> Дано поточну кількість годи, хвилин, секунд (як на годиннику). 
+                Визначити який буде час на годиннику через N секунд.
+</p> -->
+
+            <p> The current number of hours, minutes, seconds (as per clock) is given.
+                Determine what time will be for the clock in N seconds</p>
+
+        </main>
+        <script>
+            // Enter the required data
+            const time = new Date
+
+            console.log(time);
+            const HOURS = time.getHours()
+            const MINUTES = time.getMinutes()
+            const SECONDS = time.getSeconds()
+
+            const PLUS_SECONDS = parseInt(prompt('What number of seconds to add?', '355'))
+
+            //Determining the result
+            // Find all of seconds
+            const allSecondsInput = (HOURS * 3600) + (MINUTES * 60) + SECONDS
+            const resultSeconds = (SECONDS + PLUS_SECONDS) % 60
+            const resultHours = Math.floor(allSecondsInput / 3600)
+
+            const resultMinutes = ((allSecondsInput + PLUS_SECONDS) - (resultHours * 3600)) / 60
+            const integerMinutes = Math.floor(resultMinutes)
+
+
+            // Input data entry
+            document.write(`
+            <div class="js-output">
+                <h2>Time is now:</h2>
+                <p>HOURS - ${HOURS} </p> 
+                <p>MINUTES - ${MINUTES} </p> 
+                <p>SECONDS - ${SECONDS} </p> 
+                <br>
+                <p>Added seconds - ${PLUS_SECONDS} </p> 
+
+
+
+            </div>`)
+
+            // Result output
+            document.write(`
+            <div class="js-output">
+                <h2>Result output:</h2>
+                <p>HOURS - ${resultHours} </p> 
+                <p>MINUTES - ${integerMinutes} </p> 
+                <p>SECONDS - ${resultSeconds} </p> 
+                </div>`)
+        </script>
+    </div>
+
+</body>
+
+</html>
