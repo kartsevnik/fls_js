@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Задача 7</title>
+    <title>Additional Task 2</title>
     <script src="./js/task7.js"></script>
     <link rel="stylesheet" href="../css/style.css">
 </head>
@@ -28,9 +28,9 @@
         </header>
         <main class="main-task">
 
-            <h3>Додаткова Задача 2.</h3>
-            <p> З клавіатури вводиться розмір заробітної плати та розмір прожиткового мінімуму. Визначити розмір
-                соціальної допомоги (ввжаємо, що заробітна плата є меншою).</p>
+            <h3>Additional Task 2.</h3>
+            <!-- <p> З клавіатури вводиться розмір заробітної плати та розмір прожиткового мінімуму. Визначити розмір
+                соціальної допомоги (вважаємо, що заробітна плата є меншою).</p> -->
             <p> Enter the amount of salary and the subsistence minimum from the keyboard. Determine the amount of
                 social assistance (assume that the salary is lower).</p>
 
@@ -38,26 +38,17 @@
 
         </main>
         <script>
-            // Ввод необхідних даних
-            let displayWidth = window.innerWidth
-            console.log(displayWidth);
-            let quantityOfElements = parseInt(prompt('Введіть кількість елементів', '14'))
-            let widthOfElements = parseInt(prompt('Введіть ширину елементів', '20'))
+            // Enter the required data
+            const salary = parseFloat(prompt(`Enter the amount of salary`, `1500$`))
+            const subsistenceMinimum = parseFloat(prompt(`Enter the subsistenceMinimum`, `2100$`))
 
-            //Знаходимо  результати
+            //Determining the result
+            let result = subsistenceMinimum - salary
 
-            let sumOfWidthElements = quantityOfElements * widthOfElements
-
-            let result = displayWidth / sumOfWidthElements
-
-
-
-
-
-            // Вивід вхідних
-            document.write(`<div class="js-output"><h2>Вхідні:</h2><p>Ширина вашого екрану дорівнює- ${displayWidth} px </p> <p>Визначена кількість елементів - ${quantityOfElements} шт</p> <p>Ширина 1 елементу - ${widthOfElements} px</p></div>`)
-            // Вивід результату
-            document.write(`<div class="js-output"><h2>Результат:</h2><h2>На екрані поміститься - ${result.toFixed(0)} елементів</h2></div>`)
+            // Input data entry
+            document.write(`<div class="js-output"><h2>Input data entry:</h2><p>Amount of salary - ${salary} $ </p><p>Subsistence minimum - ${subsistenceMinimum} $ </p></div>`)
+            // Result output
+            document.write(`<div class="js-output"><h2>Result entry:</h2><p>The amount of social assistance is equal - ${result} $ </p></div>`)
         </script>
     </div>
 

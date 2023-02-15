@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Additional Task 5</title>
+    <script src="./js/task7.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+
+            <div class="header__menu">
+                <ul class="menu">
+                    <li class="menu__link"><a href="../index.html">HOME</a></li>
+                    <li class="menu__link"><a href="https://edu.fls.guru/js.html">Course JS from FLS</a></li>
+
+                    <li class="menu__link"> <a href="https://github.com/kartsevnik/">Github: kartsevnik </a></li>
+                    <li class="menu__link">Discord: eMKey#2306</a></li>
+                </ul>
+
+            </div>
+
+        </header>
+        <main class="main-task">
+
+            <h3>Additional Task 5.</h3>
+
+            <!-- <p> Скласти алгоритм, який обчислює цілу і дробову частину даного числа х. Наприклад: число 23,56  => ціла: 23, дробова: 0,56.</p> -->
+
+            <p> Create an algorithm that calculates the whole and fractional part of the given number of x. For example:
+                Number 23,56 => whole: 23, fractional: 0,56.</p>
+
+        </main>
+        <script>
+            // Enter the required data
+            const fractionalPart = parseFloat(prompt('Enter the fractional part of number', '23.56'))
+            const integer = Math.trunc(fractionalPart)
+            const fractional = fractionalPart - integer
+            //Determining the result
+
+
+            // Input data entry
+            document.write(`
+            <div class="js-output">
+                <h2>Input data entry:</h2>
+                <p>Fractional part of number - ${fractionalPart} </p> 
+
+            </div>`)
+
+            // Result output
+            document.write(`
+            <div class="js-output">
+                <h2>Result output:</h2>
+                <h2>Integer of the fractional part ${integer}</h2>
+                <p>Fractional part of number - ${fractional.toFixed(2)} </p> 
+
+                </div>`)
+        </script>
+    </div>
+
+</body>
+
+</html>
