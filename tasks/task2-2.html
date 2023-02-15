@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Задача 2</title>
+    <title>Task 2</title>
     <script src="./js/task2.js"></script>
     <link rel="stylesheet" href="../css/style.css">
 </head>
@@ -28,25 +28,26 @@
         </header>
         <main class="main-task">
 
-            <h3>Задача 2.</h3>
-            <p> Дано рік народження (дата: 1 січня) та поточний рік. Знайти кількість років.</p>
+            <h3>Task 2.</h3>
+            <p>The year of birth (date: January 1) and the current year
+                are given. Find the quantity of years.</p>
 
 
         </main>
         <script>
-            // Ввод необхідних даних
+            // Enter the required data
             let today = new Date()
             let year = today.getFullYear()
-            let dayOfBirthday = parseInt(prompt(`Який ваш рік народження`, '1990'))
+            let dayOfBirthday = parseInt(prompt(`What is your year of birth`, '1990'))
 
-            //Знаходимо результати
+            //Determining the result
             let differenceYear = year - dayOfBirthday
 
-            // Вивід вхідних
+            // Input data entry
 
-            document.write(`<div class="js-output"><h2>Вхідні:</h2><p>Рік народження - ${dayOfBirthday} </p> <p>Поточний рік - ${year} </p> </div>`)
-
-            document.write(`<div class="js-output"><h2>Результат:</h2> <h2>Ой лишенько. Вже пройшло аж ${differenceYear} роки, СТАРЧЕ</h2></div>`)
+            document.write(`<div class="js-output"><h2>Input data:</h2><p>Year of birth - ${dayOfBirthday} </p> <p>Поточний рік - ${year} </p> </div>`)
+            // Result output
+            document.write(`<div class="js-output"><h2>Result output:</h2> <h2>Oh, dear. It's been${differenceYear} years, old man</h2></div>`)
 
 
 

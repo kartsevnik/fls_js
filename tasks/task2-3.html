@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Задача 3</title>
+    <title>Task 3</title>
     <script src="./js/task3.js"></script>
     <link rel="stylesheet" href="../css/style.css">
 </head>
@@ -28,25 +28,26 @@
         </header>
         <main class="main-task">
 
-            <h3>Задача 3.</h3>
-            <p> Дано вартість одиниці товару і кількість. Знайти загальну вартість та ПДВ (5% від загальної вартості).
+            <h3>Task 3.</h3>
+            <p> The unit price and quantity are given. Find the total cost
+                and VAT (5% of the total cost).
             </p>
 
 
         </main>
         <script>
-            // Ввод необхідних даних
-            let cost = parseFloat(prompt(`По чому в Одесі руберойд?`, '130.50 грн.'))
-            let remains = parseFloat(prompt(`А скіки ще є?`, '1403 шт.'))
+            // Enter the required data
+            let cost = parseFloat(prompt(`What is the price of roofing material in Odesa?`, '130.50 uah.'))
+            let remains = parseFloat(prompt(`How many more pieces do you have??`, '1403 pc.'))
 
-            //Знаходимо результати
+            //Determining the result
             let sumOfProduct = cost * remains
             let procent5 = sumOfProduct * 0.05
 
-            // Вивід вхідних
-            document.write(`<div class="js-output"><h2>Вхідні:</h2><p>Рубероїд коштує - ${cost} грн.</p>  <p>Залишок - ${remains} шт. </p></div>`)
-            // Вивід результату
-            document.write(`<div class="js-output"><h2>Результат:</h2><h2>Якщо хочете купити все, тоді з вас ${sumOfProduct.toFixed(2)} грн., з яких ${procent5.toFixed(2)} грн. ПДВ 5%</h2></div>`)
+            // Input data entry
+            document.write(`<div class="js-output"><h2>Input data:</h2><p>Roofing material costs - ${cost} грн.</p>  <p>Balance - ${remains} pc. </p></div>`)
+            // Result output
+            document.write(`<div class="js-output"><h2>Result output:</h2><h2>If you want to buy everything, then you will have to pay ${sumOfProduct.toFixed(2)} uah., including ${procent5.toFixed(2)} uah. vat 5%</h2></div>`)
 
         </script>
     </div>

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Задача 7</title>
+    <title>Additional Task 1</title>
     <script src="./js/task7.js"></script>
     <link rel="stylesheet" href="../css/style.css">
 </head>
@@ -28,34 +28,29 @@
         </header>
         <main class="main-task">
 
-            <h3>Додаткова Задача 1.</h3>
-            <p> Дано ширину екрана та кількість елементів, які повинні бути відображені у рядку. Визначити ширину
-                елементів, які повинні бути відображені у цьому рядку.</p>
-
-
+            <h3>Additional Task 1.</h3>
+            <p> Given the width of the screen and the number of items to be displayed in a row. Determine the width of
+                the
+                of the items to be displayed in this row.</p>
 
         </main>
         <script>
-            // Ввод необхідних даних
+            // Enter the required data
             let displayWidth = window.innerWidth
             console.log(displayWidth);
-            let quantityOfElements = parseInt(prompt('Введіть кількість елементів', '14'))
-            let widthOfElements = parseInt(prompt('Введіть ширину елементів', '20'))
+            let quantityOfElements = parseInt(prompt('Enter the number of items', '14'))
+            let widthOfElements = parseInt(prompt('Enter the width of the elements', '20'))
 
-            //Знаходимо  результати
+            //Finding results
 
             let sumOfWidthElements = quantityOfElements * widthOfElements
-
             let result = displayWidth / sumOfWidthElements
 
 
-
-
-
-            // Вивід вхідних
-            document.write(`<div class="js-output"><h2>Вхідні:</h2><p>Ширина вашого екрану дорівнює- ${displayWidth} px </p> <p>Визначена кількість елементів - ${quantityOfElements} шт</p> <p>Ширина 1 елементу - ${widthOfElements} px</p></div>`)
-            // Вивід результату
-            document.write(`<div class="js-output"><h2>Результат:</h2><h2>На екрані поміститься - ${result.toFixed(0)} елементів</h2></div>`)
+            // Input data entry
+            document.write(`<div class="js-output"><h2>Input data entry:</h2><p>The width of your screen is- ${displayWidth} px </p> <p>A certain number of elements - ${quantityOfElements} шт</p> <p>Width of 1 element - ${widthOfElements} px</p></div>`)
+            // Result output
+            document.write(`<div class="js-output"><h2>Result output:</h2><h2>The screen will display - ${result.toFixed(0)} elements</h2></div>`)
         </script>
     </div>
 

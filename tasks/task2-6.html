@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Задача 6</title>
+    <title>Task 6</title>
     <script src="./js/task6.js"></script>
     <link rel="stylesheet" href="../css/style.css">
 </head>
@@ -28,26 +28,27 @@
         </header>
         <main class="main-task">
 
-            <h3>Задача 6.</h3>
+            <h3>Task 6.</h3>
             <p>
-                З клавіатури вводяться вартість товару та кількість одиниць 3 товарів. Обчислити вартість кожного товару
-                окремо та загальну вартість. Вивести чек (як у супермаркеті) використовуючи елементи розмітки.
+                Given the number of seconds that have passed since the
+                beginning of the day. Determine how many hours and minutes it is.
             </p>
 
-
         </main>
+
         <script>
-            // Ввод необхідних даних
-            let priceOfProduct1 = parseFloat(prompt('Вартість 1 товару?', '12.5 грн.'))
-            let quantityOfProduct1 = parseFloat(prompt('Яка кількість 1 товару?', '105'))
+            // Enter the required data
 
-            let priceOfProduct2 = parseFloat(prompt('Вартість 2 товару?', '15.15 грн.'))
-            let quantityOfProduct2 = parseFloat(prompt('Яка кількість 2 товару?', '15'))
+            let priceOfProduct1 = parseFloat(prompt('The cost of 1 product?', '12.5 uah.'))
+            let quantityOfProduct1 = parseFloat(prompt('What is the quantity of 1 product?', '105'))
 
-            let priceOfProduct3 = parseFloat(prompt('Вартість 3 товару?', '20.52 грн.'))
-            let quantityOfProduct3 = parseFloat(prompt('Яка кількість 3 товару?', '53'))
+            let priceOfProduct2 = parseFloat(prompt('The cost of 2 product?', '15.15 uah.'))
+            let quantityOfProduct2 = parseFloat(prompt('What is the quantity of 2 product?', '15'))
 
-            //Знаходимо результати
+            let priceOfProduct3 = parseFloat(prompt('The cost of 3 product?', '20.52 uah.'))
+            let quantityOfProduct3 = parseFloat(prompt('What is the quantity of 2 product?', '53'))
+
+            //Determining the result 
 
             let sumOfProduct1 = priceOfProduct1 * quantityOfProduct1
             let sumOfProduct2 = priceOfProduct2 * quantityOfProduct2
@@ -55,34 +56,34 @@
 
             let totalSumOfProducts = sumOfProduct1 + sumOfProduct2 + sumOfProduct3
 
-            // Вивід вхідних
+            // Result output
 
-            document.write(`<div class="js-output"><h2>Результат:</h2></div>`)
+            document.write(`<div class="js-output"><h2>Result output:</h2></div>`)
 
             document.write(`
     <table class="js-table">
         <tr>
-            <td>Назва</td>
-            <td>Ціна</td>
-            <td>Сума</td>
+            <td>Name</td>
+            <td>Price</td>
+            <td>Sum</td>
         </tr>
         <tr>
-            <td style="border: #000 solid 1px;">1 Продукт</td>
+            <td style="border: #000 solid 1px;">1 product</td>
             <td style="border: #000 solid 1px;">${priceOfProduct1}</td>
             <td style="border: #000 solid 1px;">${sumOfProduct1}</td>
         </tr>
         <tr>
-            <td style="border: #000 solid 1px;">2 Продукт</td>
+            <td style="border: #000 solid 1px;">2 product</td>
             <td style="border: #000 solid 1px;">${priceOfProduct2}</td>
             <td style="border: #000 solid 1px;">${sumOfProduct2}</td>
         </tr>
         <tr>
-            <td style="border: #000 solid 1px;">3 Продукт</td>
+            <td style="border: #000 solid 1px;">3 product</td>
             <td style="border: #000 solid 1px;">${priceOfProduct3}</td>
             <td style="border: #000 solid 1px;">${sumOfProduct3}</td>
         </tr>
         <tr>
-            <td>Всього:</td>
+            <td>Total:</td>
             <td>${totalSumOfProducts}</td>
         </tr>
     

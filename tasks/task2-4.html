@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Задача 4</title>
+    <title>Task 4</title>
     <script src="./js/task4.js"></script>
     <link rel="stylesheet" href="../css/style.css">
 </head>
@@ -28,22 +28,23 @@
         </header>
         <main class="main-task">
 
-            <h3>Задача 4.</h3>
-            <p> Дано довжину у сантиметрах. Визначати скільки це метрів і кілометрів.</p>
+            <h3>Task 4.</h3>
+            <p> The length is given in centimeters. Determine how many
+                meters and kilometers it is.</p>
 
         </main>
         <script>
-            // Ввод необхідних даних
-            let centimeter = parseInt(prompt(`Ну шо там? Скіки в тебе сантиметрів?`))
+            // Enter the required data
+            let centimeter = parseInt(prompt(`What's up? How many centimeters are you have?`))
 
-            //Знаходимо результати
+            //Determining the result
             let metr = centimeter / 100
             let kilometr = centimeter / 100000
 
-            // Вивід вхідних
-            document.write(`<div class="js-output"><h2>Вхідні:</h2><p>Введенна кількість сантиметрів - ${centimeter} </p> </div>`)
-            // Вивід результату
-            document.write(`<div class="js-output"><h2>Результат:</h2><p>Метрів - ${metr}</p><p>Кілометрів - ${kilometr} </p></div>`)
+            // Input data entry
+            document.write(`<div class="js-output"><h2>Input data:</h2><p>The number of centimeters entered - ${centimeter} </p> </div>`)
+            // Result output
+            document.write(`<div class="js-output"><h2>Result output:</h2><p>Meters - ${metr}</p><p>Kilometers - ${kilometr} </p></div>`)
 
         </script>
     </div>
