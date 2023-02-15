@@ -46,19 +46,16 @@
 
             //------------------------Знаходимо хвилини
             let minuts = quantityOfSeconds / 60
-            //Рахуємо кількість хвилин в цілих годинах
-            let minutsInHours = integerHours * 60
-            //Знаходимо кількість хвилин
-            let integerMinuts = minuts - minutsInHours
             //Виводимо ціле число
-            let resoultMinuts = integerMinuts
+            let integerminuts = Math.floor(minuts)
 
-            //------------------------Знаходимо секунди
-            let secondsWithoutHoursAndMinuts = ((integerHours * 60) * 60) + (resoultMinuts * 60)
-            let seconds = quantityOfSeconds - secondsWithoutHoursAndMinuts
+            //------------------------Знаходимо остаток секунд
+            let lastseconds = quantityOfSeconds % 60
+
+
 
             //------------------------Вивід результату
-            document.write(`<div class="js-output"><h2>Результат:</h2><h3>${integerHours} час(а/ов), ${resoultMinuts.toFixed(0)} минут, ${seconds} секунд,</h3></div>`)
+            document.write(`<div class="js-output"><h2>Результат:</h2><h3>${integerHours} час(а/ов), ${integerminuts.toFixed(0)} минут, ${lastseconds} секунд,</h3></div>`)
 
 
             // Не можу зрозуміти чому іноді виходять від'ємні секунди
