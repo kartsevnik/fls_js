@@ -51,37 +51,29 @@
         </main>
         <footer class="footer"> </footer>
         <script>
-            // Ввод необхідних даних
+            // Enter the required data
             let a = parseInt(prompt('Введіть ціле число а', '2'))
             let b = parseInt(prompt('Введіть ціле число b', '4'))
             let c = parseInt(prompt('Введіть ціле число c', '6'))
 
-            //Знаходимо результат s1
-
+            //Determining the result - s1
             let s1 = a + 12 + b
 
-            //Знаходимо результат s2
+            //Determining the result - s2
+            let s2 = Math.sqrt((a + b) / (2 * a))
 
-            let numerator = a + b
-            let denominator = 2 * a
-            let resultFraction = numerator / denominator
-            let s2 = Math.sqrt(resultFraction)
 
-            //Знаходимо результат s3
+            //Determining the result - s3
+            let s3 = Math.cbrt((a + b) * c)
 
-            let summInBrackets = a + b
-            let resultCalculation = summInBrackets * c
-            let s3 = Math.cbrt(resultCalculation)
+            //Determining the result - s4
+            let s4 = Math.sin(a / (-b))
 
-            //Знаходимо результат s4
-            let resultInBrackets = a - b
-            let s4 = Math.sin(resultInBrackets)
-
-            // Вивід вхідних
+            // Input data entry
             document.write(`<div class="js-output"><h2>Вхідні:</h2><p>a = ${a} </p> <p>b = ${b} </p> <p>c = ${c} </p></div>`)
 
 
-            // Вивід результатів
+            // Result output
 
             document.write(`<div class="js-output"><h2>Результати:</h2><p>S1 = ${s1} </p> <p>S2 = ${s2} </p> <p>S3 = ${s3} </p><p>S4 = ${s4} </p></div>`)
 
