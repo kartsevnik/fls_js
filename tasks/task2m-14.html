@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Additional Task 5</title>
+    <title>Additional Task 14</title>
     <script src="./js/task7.js"></script>
     <link rel="stylesheet" href="../css/style.css">
 </head>
@@ -33,27 +33,43 @@
         </header>
         <main class="main-task">
 
-            <h3>Additional Task 5.</h3>
+            <h3>Additional Task 14.</h3>
 
-            <!-- <p> Скласти алгоритм, який обчислює цілу і дробову частину даного числа х. Наприклад: число 23,56  => ціла: 23, дробова: 0,56.</p> -->
+            <!-- <p> Зашифрувати один введений англійський символ у верхньому регістрі (один з символів: A,B,…Z)  методом зміщення (шифр Цезаря).</p> -->
 
-            <p> Create an algorithm that calculates the whole and fractional part of the given number of x. For example:
-                Number 23,56 => whole: 23, fractional: 0,56.</p>
+            <p> Encrypt one entered English character in the upper case (one of the characters: A,B,…Z) by the shift
+                method (Caesar's cipher).</p>
 
         </main>
         <script>
             // Enter the required data
-            const fractionalPart = parseFloat(prompt('Enter the fractional part of number', '23.56'))
-            const integer = Math.trunc(fractionalPart)
-            const fractional = fractionalPart - integer
-            //Determining the result
+            const ENTER_LETTER = prompt("Please, enter the letter in the upper case from A to Z", 'A').toUpperCase()
+            const ENTER_SHIFT_METHOD = parseInt(prompt(`Which shift method? (Number from 1 to 10)`, `1`))
 
+            // Transfer letter to number
+            const LetterToNumber = ENTER_LETTER.charCodeAt(0)
+
+            //Added shift method
+            const addedShiftMethod = LetterToNumber + ENTER_SHIFT_METHOD
+
+            console.log(addedShiftMethod);
+
+
+
+            //Determining the result
+            // Решение
+            console.log(24 % 23);
+
+            document.write(`
+<div>Введенная буква: ${letter}</div>
+<div>Зашифрованная буква: ${newLatter}</div>
+`)
 
             // Input data entry
             document.write(`
             <div class="js-output">
                 <h2>Input data entry:</h2>
-                <p>Fractional part of number - ${fractionalPart} </p> 
+                <p>Age of child - ${AGE_OF_CHILD} years </p> 
 
             </div>`)
 
@@ -61,8 +77,7 @@
             document.write(`
             <div class="js-output">
                 <h2>Result output:</h2>
-                <h2>Integer of the fractional part ${integer}</h2>
-                <p>Fractional part of number - ${fractional.toFixed(2)} </p> 
+                <h2>Time to go to the garden left to wait ${timeToGoToKindergarten} years</h2>
 
                 </div>`)
         </script>

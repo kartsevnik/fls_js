@@ -1,4 +1,4 @@
-/* null */ 
+/* null */
 * {
     padding: 0px;
     margin: 0px;
@@ -79,7 +79,7 @@ h6 {
     touch-action: none; */
 }
 
-
+/* ====================================================== */
 .wrapper {
     background: linear-gradient(130.68deg, #414141 0%, #2D2D2D 100.52%);
     min-height: 100%;
@@ -108,6 +108,13 @@ h6 {
     padding: 10px;
 }
 
+.link-image {
+    max-width: 30px;
+}
+
+.link-image:last-child {
+    max-width: 30px;
+}
 
 /* ====================================== */
 
@@ -115,11 +122,13 @@ h6 {
 
 .menu {
     display: flex;
+    flex-wrap: wrap;
     background: #2A2A2A;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.47);
     gap: 35px;
+    align-items: center;
     justify-content: center;
-    padding: 20px 0;
+    padding: 20px 50px;
     font-size: 22px;
 }
 
@@ -192,7 +201,7 @@ h6 {
     font-size: 20px;
     line-height: 24px;
     letter-spacing: 0.01em;
-    color: #FFFFFF; 
+    color: #FFFFFF;
 }
 
 .footer {}
