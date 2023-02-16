@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Additional Task 11</title>
+    <!-- <script src="./js/task7.js"></script> -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+
+            <div class="header__menu">
+                <ul class="menu">
+                    <li class="menu__link"><a href="../index.html">HOME</a></li>
+                    <li class="menu__link"><a href="https://edu.fls.guru/js.html">Course JS from FLS</a></li>
+
+                    <li class="menu__link"> <a href="https://github.com/kartsevnik/">Github: kartsevnik </a></li>
+                    <li class="menu__link">Discord: eMKey#2306</a></li>
+                </ul>
+
+            </div>
+
+        </header>
+        <main class="main-task">
+
+            <h3>Additional Task 11.</h3>
+
+            <!-- <p> З клавіатури вводиться номер дня тижня (від 1 до 7). Визначити який буде день тижня через N днів.</p> -->
+
+            <p> The number of the day of the week (1 to 7) is entered from the keypad. Determine which day of the week
+                in N days.</p>
+
+        </main>
+        <script>
+            // Enter the required data
+            const START_DAY = parseInt(prompt(`Enter start day?`, `5`))
+            const PLUS_DAYS = parseInt(prompt(`How many days plus?`, `5`))
+
+            //Determining the result
+            const result = (START_DAY + PLUS_DAYS) % 7
+
+
+            // Input data entry
+            document.write(`
+            <div class="js-output">
+                <h2>Input data entry:</h2>
+                <p>Number of start day- ${START_DAY} </p> 
+                <p>Plus ${PLUS_DAYS} days </p> 
+
+            </div>`)
+
+            // Result output
+            document.write(`
+            <div class="js-output">
+                <h2>Result output:</h2>
+                <h2>Will ${result} day of next week</h2>
+
+                </div>`)
+        </script>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Additional Task 12</title>
+    <!-- <script src="./js/task7.js"></script> -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+
+            <div class="header__menu">
+                <ul class="menu">
+                    <li class="menu__link"><a href="../index.html">HOME</a></li>
+                    <li class="menu__link"><a href="https://edu.fls.guru/js.html">Course JS from FLS</a></li>
+
+                    <li class="menu__link"> <a href="https://github.com/kartsevnik/">Github: kartsevnik </a></li>
+                    <li class="menu__link">Discord: eMKey#2306</a></li>
+                </ul>
+
+            </div>
+
+        </header>
+        <main class="main-task">
+
+            <h3>Additional Task 12.</h3>
+
+            <!-- <p> З клавіатури вводиться кількість місяців, які пройшли від деякого моменту часу. Вивести повну кількість років і місяців. Наприклад, дано 28 місяців, а вивести 2 роки і 4 місяці.</p> -->
+
+            <p> The keypad is used to enter the number of months that have elapsed since a certain point in time. Bring
+                the total number of years and months. For example, it is given 28 months, and let out 2 years and 4
+                months.</p>
+
+        </main>
+        <script>
+            // Enter the required data
+            const ENTER_MONTH = parseInt(prompt(`How many month?`, `28`))
+
+            //Determining the result
+            const resultYears = Math.floor(ENTER_MONTH / 12)
+            const resultMonth = ENTER_MONTH % 12
+
+
+            // Input data entry
+            document.write(`
+            <div class="js-output">
+                <h2>Input data entry:</h2>
+                <p>The number of months has been entered - ${ENTER_MONTH} </p> 
+
+            </div>`)
+
+            // Result output
+            document.write(`
+            <div class="js-output">
+                <h2>Result output:</h2>
+                <h2>This is ${resultYears} years and ${resultMonth} monthes</h2>
+
+                </div>`)
+        </script>
+    </div>
+
+</body>
+
+</html>
