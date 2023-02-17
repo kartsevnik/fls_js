@@ -8,26 +8,18 @@ const maxNum = 5
 const randomNumber = minNum + Math.floor(Math.random() * (maxNum - minNum + 1))
 
 // Determining the result
+let result
 
-if (randomNumber == firstAsk)
-    document.write(`
-<div class="js-output">
-<h2>Result:</h2>
-<p>Yes, you WIN! This is ${randomNumber}</p> 
-</div>`)
-
-else if (randomNumber == secondAsk)
-    document.write(`
-<div class="js-output">
-<h2>Result:</h2>
-<p>Yes, you WIN! This is ${randomNumber}</p> 
-</div>`)
-
+if (randomNumber === firstAsk)
+    result = 'Yes, you WIN!'
+else if (randomNumber === secondAsk)
+    result = 'Yes, you WIN!'
 else
-    document.write(`
+    result = 'No, i am sorry, but you loose!'
+
+
+document.write(`
 <div class="js-output">
 <h2>Result:</h2>
-<p>I am sorry, but this is ${randomNumber}, you entered ${firstAsk} and ${secondAsk} </p> 
+<p>${result} You entered numbers ${firstAsk} and ${secondAsk}. This is ${randomNumber}</p> 
 </div>`)
-
-

@@ -1,29 +1,29 @@
 // Enter the required data
-let driverCategory = prompt(`Please, enter the driver category: A, B or C`, `A`).toUpperCase()
+const driverCategory = prompt(`Please, enter the driver category: A, B or C`, `A`).toUpperCase()
 
 // Determining the result
+let enteredDriverCategory
+let typeOfTransport
 
-if (driverCategory == "A")
-    document.write(`
+if (driverCategory == "A") {
+    enteredDriverCategory = 'A'
+    typeOfTransport = 'motorcycle'
+}
+else if (driverCategory == "B") {
+    enteredDriverCategory = 'B'
+    typeOfTransport = 'car'
+}
+else if (driverCategory == "C") {
+    enteredDriverCategory = 'C'
+    typeOfTransport = 'truck'
+}
+else {
+    enteredDriverCategory = 'error'
+    typeOfTransport = 'error'
+}
+
+document.write(`
 <div class="js-output">
 <h2>Input data:</h2>
-<p>Are you have the driver category ${driverCategory} and can drive - motorcycle</p> 
-</div>`)
-else if (driverCategory == "B")
-    document.write(`
-<div class="js-output">
-<h2>Input data:</h2>
-<p>Are you have the driver category ${driverCategory} and can drive - car</p> 
-</div>`)
-else if (driverCategory == "C")
-    document.write(`
-<div class="js-output">
-<h2>Input data:</h2>
-<p>Are you have the driver category ${driverCategory} and can drive - truck</p> 
-</div>`)
-else
-    document.write(`
-<div class="js-output">
-<h2>Input data:</h2>
-<p>I am sorry, but I don't understand this letter - ${driverCategory}, try again </p> 
+<p>Are you have the driver category ${enteredDriverCategory} and can drive - ${typeOfTransport}</p> 
 </div>`)

@@ -3,6 +3,15 @@
 const costOfProduct = parseFloat(prompt(`How much does this product cost?`, `2500`))
 const money = parseFloat(prompt(`How much money are you have?`, `3500`))
 
+let result
+// Determining the result
+if (costOfProduct > money)
+    result = 'Sorry, but to purchase a product you do not have enough'
+else if (money > (costOfProduct + 3))
+    result = 'Are you want to buy another lottery ticket? It costs 4$'
+else if (money >= costOfProduct)
+    result = 'Thank you for your purchase. Have a nice day.'
+
 // Input data entry
 document.write(`
 // <div class="js-output">
@@ -11,26 +20,11 @@ document.write(`
 <p>Are you have ${money} $</p> 
  </div>`)
 
-// Determining the result
-if (costOfProduct > money)
-    document.write(`
-<div class="js-output">
-<h2>Result output:</h2>
-<p>Sorry, but to purchase a product you do not have enough ${costOfProduct - money} </p> 
-</div>`)
-
-else if (money > (costOfProduct + 3))
-    document.write(`
-<div class="js-output">
-<h2>Result output:</h2>
-<p>Are you want to buy another lottery ticket? It costs 4$ </p> 
-</div>`)
-
-else if (money >= costOfProduct)
-    document.write(`
+// Result output
+document.write(`
  <div class="js-output">
  <h2>Result output:</h2>
- <p>Thank you for your purchase. Have a nice day.</p> 
+ <p>${result} </p> 
  </div>`)
 
 
@@ -39,11 +33,3 @@ else if (money >= costOfProduct)
 
 
 
-
-// Result output
-document.write(`
-<div class="js-output">
-<h2>Result output:</h2>
-<p>S1 = ${s1} </p> 
-
-</div>`)
