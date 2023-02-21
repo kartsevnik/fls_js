@@ -22,10 +22,16 @@ else if (integerRandomNumberSecond > integerRandomNumberFirst) {
     max = integerRandomNumberSecond + 1
     min = integerRandomNumberFirst
 }
+else {
+    max = integerRandomNumberSecond
+    min = integerRandomNumberFirst
+}
 
 // Working with the number from user
 let result
-if ((enterUserNumber > (min + 10)) && (enterUserNumber < (max - 10)))
+if ((enterUserNumber >= (min + 10)) && (enterUserNumber <= (max - 10)))
+    result = `Yes, you win`
+else if ((enterUserNumber >= (min - 10)) && (enterUserNumber <= (max + 10)))
     result = `Yes, you win`
 else result = `I am sorry, you loose`
 
