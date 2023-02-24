@@ -1,6 +1,6 @@
 /* null */
 * {
-    padding: 0px;
+    /* padding: 0px; */
     margin: 0px;
     border: 0px;
 }
@@ -116,6 +116,24 @@ h6 {
     max-width: 30px;
 }
 
+ul.li-list-style {
+    display: inline-block;
+
+}
+
+.li-list-style li {
+    list-style: circle;
+}
+
+.table {
+    text-align: center;
+    display: inline;
+}
+
+.table tr td {
+    border: #ffffff 1px solid;
+}
+
 /* ====================================== */
 
 .header {}
@@ -142,7 +160,6 @@ h6 {
 
 .main-task {
     padding: 30px 0;
-    /* transform: translate(50%); */
     text-align: center;
 }
 
