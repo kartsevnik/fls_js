@@ -9,7 +9,7 @@ let num = 1
 while (num <= quantityOfProducts) {
     price = parseFloat(prompt(`Enter the costs of ${num} product`, `2.5`));
     totalPrice = totalPrice + price;
-    num = num + 1;
+    num++;
 }
 
 // Input data entry
@@ -27,3 +27,4 @@ document.write(`
 <p> Total costs is = ${totalPrice}</p> 
 
 </div>`)
+

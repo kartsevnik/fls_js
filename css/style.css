@@ -134,6 +134,25 @@ ul.li-list-style {
     border: #ffffff 1px solid;
 }
 
+
+.wrapper_task-5-12 {
+    background: linear-gradient(130.68deg, #414141 0%, #2D2D2D 100.52%);
+    min-height: 100%;
+    overflow: hidden;
+    color: white;
+    text-align: center;
+}
+
+.task-5-12 {
+    display: inline;
+}
+
+.task-5-12 img {
+    width: 10%;
+    padding-bottom: 20px;
+}
+
+
 /* ====================================== */
 
 .header {}

@@ -4,11 +4,15 @@ let num = 0
 let randomNumber
 // Determining the result
 
+let result = `<ul class="li-list-style">`
 while (num < quantityOfNumber) {
-    randomNumber = Math.floor(Math.random() * 100) + 1;
-    document.write(`
-    <div class="js-output">
-    <li> Random Number is = ${randomNumber}</li> 
-    </div>`)
-    num = num + 1;
+    randomNumber = Math.floor(Math.random() * 100) + 1
+    result = result + `<li>${randomNumber}</li>`
+    num++
 }
+result = result + `</ul>`
+
+document.write(`
+<div class="js-output">
+${result}
+</div>`)

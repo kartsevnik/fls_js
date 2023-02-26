@@ -1,26 +1,17 @@
-// Enter the required data
+// Determining the result
 let table = `<table style="text-align: center"><tr>`
+for (let i = 1; i <= 9; i++) {
+    table = table + `<td style="border: 1px solid #fff; display:inline">${i}</td>`
 
-
-let j
-for (j = 1; j < 3; j++)
-    table = table + `<td style="border: 1px solid #fff; display:inline">${j}</td>`
-if (j === 3)
-    table = table + `<td style="border: 1px solid #fff; display:inline">${j}</td></tr>`
-for (j = 4; j < 6; j++)
-    table = table + `<td style="border: 1px solid #fff; display:inline">${j}</td>`
-if (j === 6)
-    table = table + `<td style="border: 1px solid #fff; display:inline">${j}</td></tr>`
-for (j = 7; j < 9; j++)
-    table = table + `<td style="border: 1px solid #fff; display:inline">${j}</td>`
-if (j === 9)
-    table = table + `<td style="border: 1px solid #fff; display:inline">${j}</td></tr>`
-
-
+    let porting = i % 3
+    if (porting === 0) {
+        table = table + `</tr>`
+    }
+}
 table = table + `</table>`
 
 document.write(table)
-// Determining the result
+
 
 
 
