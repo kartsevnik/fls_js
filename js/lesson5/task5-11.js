@@ -2,17 +2,17 @@
 const enterNumberMin = parseInt(prompt(`Enter your min number, please`, `4`))
 const enterNumberMax = parseInt(prompt(`Enter your max number, please`, `40`))
 
-let result = 0
 let i = 0
 let sum
-let even
+let odd
+let result = 0
 
 // Determining the result
 
 do {
     sum = enterNumberMin + i
-    even = sum % 2
-    if ((even === 1) && sum < enterNumberMax)
+    odd = sum % 2
+    if ((odd === 1) && sum < enterNumberMax)
         result = result + sum
     i = i + 1
 } while ((i <= (5 * 2) && sum < enterNumberMax)) {
