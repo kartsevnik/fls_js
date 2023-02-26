@@ -11,7 +11,7 @@ for (let i = 1; i <= 27; i++) {
     }
 
     let porting2 = i % 9
-    if (porting2 == 0) {
+    if (porting2 === 0) {
         table = table + `</table><table style="text-align: center"><tr><br>`
     }
 
