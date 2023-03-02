@@ -1,20 +1,32 @@
+// Enter the required data
+let enterTable = parseInt(prompt(`Enter the number of tables`, `3`))
+let enterColumns = parseInt(prompt(`Enter the number of columns`, `3`))
+let enterRows = parseInt(prompt(`Enter the number of rows`, `3`))
+
+
 // Determining the result
-let table = `<table style="text-align: center"><tr>`
 
-for (let i = 1; i <= 27; i++) {
+let table = ''
+let allNum = 1
 
-    table = table + `<td style="border: 1px solid #fff; display:inline">${i}</td>`
+for (let t = 1; t <= enterTable; t++) {
+    table += `<table class="table" style="text-align: center; padding: 5px">`
 
-    let porting = i % 3
-    if (porting === 0) {
-        table = table + `</tr>`
+    for (let tr = 0; tr < enterColumns; tr++) {
+        table += `<tr>`
+
+        for (let td = 1; td <= enterRows; td++) {
+            table += `<td style="border: 1px solid #fff;">${allNum}</td>`
+            allNum += 1
+        }
+        table += `</tr>`
     }
 
-    let porting2 = i % 9
-    if (porting2 === 0) {
-        table = table + `</table><table style="text-align: center"><tr><br>`
-    }
-
+    table += `</table>`
 }
 
-document.write(table)
+// Result output
+document.write(`
+<div class="js-output">
+${table}
+</div>`)

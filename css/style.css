@@ -152,6 +152,20 @@ ul.li-list-style {
     padding-bottom: 20px;
 }
 
+.task-7-8 {}
+
+.task-7-8 h2 {
+    color: #2A2A2A;
+    text-align: center;
+    font-size: 50px;
+    transform: translate(0, 100%);
+    font-weight: 900;
+}
+
+.task-7-8 img {
+    width: 50%;
+}
+
 
 /* ====================================== */
 
@@ -215,6 +229,7 @@ ul.li-list-style {
     padding: 25px;
     max-width: 270px;
     min-height: 252px;
+    transition: all 0.3s ease 0s;
 }
 
 .hometask-link:hover {
