@@ -3,11 +3,7 @@ let enterTitle = prompt(`Enter the your title, please`, `Super link`)
 let enterLink = `https://developer.mozilla.org/en-US/docs/Web/JavaScript`
 let enterImage = `../../img/task7-8/javascript-logo-banner.png`
 
-
-
-
-// Determining the result
-
+// Creating Functions
 function createBaner(title, link, image) {
     let result = ""
     let resTitle = `<h2>${title}</h2>`
@@ -16,6 +12,7 @@ function createBaner(title, link, image) {
     return result
 }
 
+// Determining the result
 let result = createBaner(enterTitle, enterLink, enterImage)
 
 // Result output

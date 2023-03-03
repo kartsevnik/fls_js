@@ -4,11 +4,12 @@ let enterTheB = parseInt(prompt(`Enter the 2 number, please`, `50`))
 let enterTheC = parseInt(prompt(`Enter the 3 number, please`, `101`))
 
 
-// Determining the result
+
+// Creating Functions
 function getValues(a, b, c) {
 
     let pairNumber
-    if (a === b && b === c)
+    if ((a === b) && (b === c))
         pairNumber = `<p>Pair Number = 3</p>`
     else if (a === b || a === c || b === c)
         pairNumber = `<p>Pair Number = 2</p>`
@@ -36,6 +37,8 @@ function getValues(a, b, c) {
     return result
 }
 
+
+// Determining the result
 let result = getValues(enterTheA, enterTheB, enterTheC)
 
 

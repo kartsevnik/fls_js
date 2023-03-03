@@ -4,7 +4,8 @@ let enterTheB = parseInt(prompt(`Enter the 2 number, please`, `3`))
 let enterTheC = parseInt(prompt(`Enter the 3 number, please`, `3`))
 let enterTheD = parseInt(prompt(`Enter the 4 number, please`, `3`))
 
-// Determining the result
+
+// Creating Functions
 function getSum(a, b, c, d) {
     let res = a + b + c + d
     return res
@@ -25,6 +26,7 @@ function getMin(a, b, c, d) {
     return res
 }
 
+// Determining the result
 let resultSum = getSum(enterTheA, enterTheB, enterTheC, enterTheD)
 let resultMultiplication = getMultiplication(enterTheA, enterTheB, enterTheC, enterTheD)
 let resultMiddleValue = getMiddleValue(enterTheA, enterTheB, enterTheC, enterTheD)

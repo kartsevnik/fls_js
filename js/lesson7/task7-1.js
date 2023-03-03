@@ -1,8 +1,8 @@
 // Enter the required data
 let enterTheMonth = parseInt(prompt(`Enter the number of month, please`, `3`))
 
-// Determining the result
 
+// Creating Functions
 function detectingMonth(numOfMonth) {
     let result
     switch (numOfMonth) {
@@ -36,6 +36,7 @@ function detectingMonth(numOfMonth) {
     return result
 }
 
+// Determining the result
 let result = detectingMonth(enterTheMonth)
 
 

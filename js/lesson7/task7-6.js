@@ -3,9 +3,7 @@ let enterColumns = parseInt(prompt(`Enter the number of columns`, `5`))
 let enterRows = parseInt(prompt(`Enter the number of rows`, `5`))
 let enterText = prompt(`Enter the text`, `cell`)
 
-
-// Determining the result
-
+// Creating Functions
 function createTable(columns, rows, text) {
     let table = ''
 
@@ -26,9 +24,8 @@ function createTable(columns, rows, text) {
     return table
 }
 
+// Determining the result
 let result = createTable(enterColumns, enterRows, enterText)
-
-
 
 // Result output
 document.write(`

@@ -1,8 +1,7 @@
 // Enter the required data
 let enterTheDay = parseInt(prompt(`Enter the number of month, please`, `3`))
 
-// Determining the result
-
+// Creating Functions
 function detectingDay(numOfDay) {
     let res
     switch (numOfDay) {
@@ -20,7 +19,7 @@ function detectingDay(numOfDay) {
     }
     return res
 }
-
+// Determining the result
 let result = detectingDay(enterTheDay)
 
 
