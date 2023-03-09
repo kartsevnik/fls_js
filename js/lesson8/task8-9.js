@@ -34,7 +34,7 @@ function getPositionOfShips(nameArray, quantityOfCells, quantityOfShips) {
 function initGame(nameArray) {
     let quantityOfShoot = 0
 
-    start: for (let i = 0; true; i++) {
+    start: while (true) {
         let usersShoot = parseInt(prompt(`Enter number of cell`, `1`))
         usersShoot = usersShoot - 1
 

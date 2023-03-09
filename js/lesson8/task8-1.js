@@ -54,31 +54,3 @@ console.log(statusOfSchoolchild);
 // Result output
 document.write(`<div div class= "js-output"> Your average value: ${averageValue}</div>`)
 document.write(`<div div class= "js-output"> You are ${statusOfSchoolchild}</div>`)
-
-
-
-
-//
-
-// let getAverageValue = function (totalEvaluation) {
-//     let averageValue = 0
-//     let quantityValue = 0
-
-//     for (let i = 0; i < totalEvaluation.length; i++) {
-//         averageValue += parseInt(totalEvaluation[i])
-//         quantityValue++
-//     }
-
-//     console.log(averageValue);
-//     console.log(quantityValue);
-
-//     averageValue = averageValue / quantityValue
-
-//     return averageValue
-// }
-// let averageValue = getAverageValue(totalEvaluation)
-
-// console.log(averageValue);
-
-
-
