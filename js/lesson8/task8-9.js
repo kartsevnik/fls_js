@@ -7,23 +7,21 @@ let fieldOfPlay = []
 for (let i = 0; i < enterQuantityOfCells; i++) {
     fieldOfPlay.push(0)
 }
-console.log(fieldOfPlay);
-
 
 // Creating Functions
 
-// Генерация случайного номера для распределения 1 в массиве
-function enterRandomNumberOfArray() {
+// Генерация случайного номера для распределения 1 (Кораблей) в массиве
+function randomCellOShipPosition() {
     let Min = 1
     let Max = enterQuantityOfCells
     return Min + Math.floor(Math.random() * (Max - Min + 1))
 }
 
-// Раскидываем 1 по массиву в случайном порядке
+// Раскидываем 1 (Кораблей) по массиву в случайном порядке
 function getPositionOfShips(nameArray, quantityOfCells, quantityOfShips) {
 
     for (let i = 0; (i < quantityOfCells) && (i !== quantityOfShips); i++) {
-        let randomNum = enterRandomNumberOfArray()
+        let randomNum = randomCellOShipPosition()
 
         if (nameArray[randomNum] === 0)
             nameArray[randomNum] = 1
@@ -31,7 +29,6 @@ function getPositionOfShips(nameArray, quantityOfCells, quantityOfShips) {
             i--
     }
 }
-console.log(fieldOfPlay);
 
 // Функция игры
 function initGame(nameArray) {
