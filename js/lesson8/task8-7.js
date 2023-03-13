@@ -2,9 +2,6 @@
 const enterPayments = 12
 let totalPayments = []
 
-let startMonth = parseInt(prompt(`Enter start month, please`, `1`))
-let endMonth = parseInt(prompt(`Enter end month, please`, `3`))
-
 function enterRandomNumber() {
     let Min = 1
     let Max = 1000
@@ -17,7 +14,7 @@ for (let i = 1; i <= enterPayments; i++) {
 }
 
 // Creating Functions
-function getSumPaymentsOfPeriod(nameArray) {
+function getSumPaymentsOfPeriod(nameArray, startMonth, endMonth) {
     let result = 0
     let i = startMonth - 1
     for (i; i <= (endMonth - 1); i++) {
@@ -86,16 +83,17 @@ function getSumPaymentsOfFirstMonthOfSeason(nameArray) {
 
 
 //Determining the result
+let startMonth = parseInt(prompt(`Enter start month, please`, `1`))
+let endMonth = parseInt(prompt(`Enter end month, please`, `3`))
+let sumPaymentsOfPeriod = getSumPaymentsOfPeriod(totalPayments, startMonth, endMonth)
 
-let sumPaymentsOfPeriod = getSumPaymentsOfPeriod(totalPayments)
-
-let sumPaymentsOfYear = getSumPaymentsOfYear(totalPayments)
-let sumPaymentsFirstHalfYear = getSumPaymentsFirstHalfYear(totalPayments)
-let sumPaymentsSecondHalfYear = getSumPaymentsSecondHalfYear(totalPayments)
-let sumPaymentsOfSummer = getSumPaymentsOfSummer(totalPayments)
-let sumPaymentsOfSecondQuarter = getSumPaymentsOfSecondQuarter(totalPayments)
-let sumPaymentsOfDoubleMonth = getSumPaymentsOfDoubleMonth(totalPayments)
-let sumPaymentsOfFirstMonthOfSeason = getSumPaymentsOfFirstMonthOfSeason(totalPayments)
+// let sumPaymentsOfYear = getSumPaymentsOfYear(totalPayments)
+// let sumPaymentsFirstHalfYear = getSumPaymentsFirstHalfYear(totalPayments)
+// let sumPaymentsSecondHalfYear = getSumPaymentsSecondHalfYear(totalPayments)
+// let sumPaymentsOfSummer = getSumPaymentsOfSummer(totalPayments)
+// let sumPaymentsOfSecondQuarter = getSumPaymentsOfSecondQuarter(totalPayments)
+// let sumPaymentsOfDoubleMonth = getSumPaymentsOfDoubleMonth(totalPayments)
+// let sumPaymentsOfFirstMonthOfSeason = getSumPaymentsOfFirstMonthOfSeason(totalPayments)
 
 // Result output
 document.write(`<div div class= "js-output">Payments from ${startMonth} to ${endMonth} monthes of year is: ${sumPaymentsOfPeriod} $</div>`)

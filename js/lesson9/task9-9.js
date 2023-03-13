@@ -7,6 +7,8 @@ let newArrayWithFirstLetter = []
 userArray.forEach(element => {
     newArrayWithFirstLetter.push(element[0][0])
 });
+// or
+let newArrayWithFirstLetterWithMap = userArray.map(name => name[0])
 
 
 // Result output
@@ -14,3 +16,4 @@ document.write(`<div div class= "js-output">Result:</div>`)
 
 document.write(`<div div class= "js-output">Before forEach: ${userArray}</div>`)
 document.write(`<div div class= "js-output">After forEach: ${newArrayWithFirstLetter}</div>`)
+document.write(`<div div class= "js-output">With Map: ${newArrayWithFirstLetterWithMap}</div>`)

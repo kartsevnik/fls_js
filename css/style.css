@@ -166,6 +166,19 @@ ul.li-list-style {
     width: 50%;
 }
 
+.lesson10 {
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    gap: 50px;
+    padding: 0 20px;
+}
+
+.lesson10 h2 {
+    font-size: 20px;
+    text-align: center;
+}
+
 
 /* ====================================== */
 
