@@ -6,12 +6,10 @@ const enterSizeOfArray = parseInt(prompt('Enter the your size of array, please',
 //Determining the result
 let userArray = new Array(enterSizeOfArray)
 
-userArray.fill(7)
-
 let halfPastOfSizeArray = Math.round(enterSizeOfArray / 2)
 
 userArray.fill(1, 0, halfPastOfSizeArray)
-
+userArray.fill(7, halfPastOfSizeArray)
 
 // Result output
 document.write(`<div div class= "js-output">Result: ${userArray}</div>`)
