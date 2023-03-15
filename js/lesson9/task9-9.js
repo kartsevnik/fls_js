@@ -5,7 +5,7 @@ let newArrayWithFirstLetter = []
 
 //Determining the result
 userArray.forEach(element => {
-    newArrayWithFirstLetter.push(element[0][0])
+    newArrayWithFirstLetter.push(element[0])
 });
 // or
 let newArrayWithFirstLetterWithMap = userArray.map(name => name[0])
