@@ -10,12 +10,7 @@ function randomNumber(min, max) {
     return minNumber + Math.floor(Math.random() * (maxNumber - minNumber + 1))
 }
 
-function addSpace(nameArray) {
-    for (let i = 0; i < nameArray.length; i++) {
-        nameArray[i] = ` ` + nameArray[i]
-    }
-    return
-}
+
 
 //Determining the result
 //Создаем массив
@@ -23,8 +18,8 @@ let userArray = new Array(enterSizeOfArray).fill(0).map(() => randomNumber(1, 10
 
 //=============================================================================================
 //1)Сформувати новий масив, у якому є тільки ті, що більші за 1000 грн.
-let arrayMore1000 = userArray.filter(el => el > 1000)
-let addSpaceToArrayMore1000 = addSpace(arrayMore1000)
+let arrayMore1000 = userArray.filter(el => el > 1000).join(`, `)
+// let addSpaceToArrayMore1000 = join()
 document.write(`<div div class= "js-output">1. Prices more 1000: ${arrayMore1000}</div>`)
 //=============================================================================================
 //3)Сформувати список з тих цін, які більші за попереднє значення

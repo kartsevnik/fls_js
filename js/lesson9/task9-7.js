@@ -26,9 +26,9 @@ let sale = 30
 document.write(`<div div class= "js-output">Result:</div>`)
 
 document.write(`<div div class= "js-output">Before forEach: ${userArray}</div>`)
-userArray.forEach((element, index, x2Array) => {
+userArray.forEach((element, index, nameArray) => {
     if (element > 1000)
-        x2Array[index] = Math.round(x2Array[index] * (100 - sale) / 100)
+        nameArray[index] = Math.round(nameArray[index] * (100 - sale) / 100)
 });
 
 document.write(`<div div class= "js-output">After forEach: ${userArray}</div>`)

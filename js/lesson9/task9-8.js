@@ -1,13 +1,15 @@
 // Enter the required data
 let userArray = [`AA111BB`, `BB123CV`, `BE222TT`, `AA000XX`, `AA765BB`, `AD890DF`, `DS111CV`, `SD111BB`, `AS111BB`,]
-let newArrayWithA = []
-
 
 //Determining the result
-userArray.forEach((element, index, baseArr) => {
-    if (element[0] === `A`)
-        newArrayWithA.push(baseArr[index])
-});
+// userArray.forEach((element, index, baseArr) => {
+//     if (element[0] === `A`)
+//         newArrayWithA.push(baseArr[index])
+// });
+
+
+let newArrayWithA = userArray.filter(element => element[0] === `A`).join(', ')
+
 console.log(userArray);
 console.log(newArrayWithA);
 
