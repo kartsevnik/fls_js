@@ -24,12 +24,15 @@ document.write(`<div div class= "js-output">Result:</div>`)
 
 // Копируем значения в новый массив + расчет налога + текст uah.
 const TAX = 20
-let taxArray = userArray.map((element, index) => ` ` + Math.round(userArray[index] * TAX / 100) + ` uah.`)
+let taxArray = userArray.map((element, index) => Math.round(element * TAX / 100))
 
-//Добавляем текст грн. в первоначальный массив
-userArray.forEach((element, index, baseArray) => {
-    baseArray[index] = ` ` + baseArray[index] + ` uah.`
-});
+//Добавляем текст грн. в массивы
+taxArray = taxArray.join(` uah, `)
+userArray = userArray.join(` uah, `)
+
+// userArray.forEach((element, index, baseArray) => {
+//     baseArray[index] = ` ` + baseArray[index] + ` uah.`
+// });
 
 // Result output
 document.write(`<div div class= "js-output">Purchase cost: ${userArray}</div>`)

@@ -21,9 +21,13 @@ console.log(userArray);
 
 // Result output
 document.write(`<div div class= "js-output">Result:</div>`)
-let sumOfPositivArray = 0
-for (const element of userArray) {
-    if (element > 0)
-        sumOfPositivArray += element
-}
-document.write(`<div div class= "js-output">${sumOfPositivArray}</div>`)
+
+
+let resultOfMultiply = userArray.find(el => el > 0)
+let result = userArray.reduce((prevRes, element, index, baseArrRef) => {
+    if (element > 0 && baseArrRef[index] !== resultOfMultiply)
+        prevRes = prevRes * baseArrRef[index]
+    return prevRes
+}, resultOfMultiply)
+
+document.write(`<div div class= "js-output">${result}</div>`)
