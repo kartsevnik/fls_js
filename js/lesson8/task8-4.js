@@ -16,31 +16,27 @@ function getAInArray(nameOfArray) {
 }
 
 // • перша і остання літери співпадають;
+
 function getAInStartAndEnd(nameOfArray) {
     let quantity = 0
+
     for (let i = 0; i < nameOfArray.length; i++) {
-        let temp = nameOfArray[i]
-
-        for (let j = 1; j < temp.length; j++) {
-            if ((j === (temp.length - 1)) && (temp[0] === temp[j]))
-                quantity += 1
-        }
-
+        if (nameOfArray[i][0] === nameOfArray[i].at(-1))
+            quantity += 1
     }
+
     return quantity
 }
 
+
 //складаються з більше ніш 5 символів;
+
 function getOver5Symbols(nameOfArray) {
     let quantity = 0
     for (let i = 0; i < nameOfArray.length; i++) {
-        let temp = nameOfArray[i]
-
-        for (let j = 0; j < temp.length; j++) {
-            if (j === 4)
-                quantity += 1
+        if (nameOfArray[i].length > 4) {
+            quantity += 1
         }
-
     }
     return quantity
 }

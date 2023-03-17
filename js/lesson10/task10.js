@@ -15,7 +15,7 @@ function randomNumber(min, max) {
 //Determining the result
 //Создаем массив
 let userArray = new Array(enterSizeOfArray).fill(0).map(() => randomNumber(1, 10000))
-
+document.write(`<div div class= "js-output">userArray: ${userArray}</div>`)
 //=============================================================================================
 //1)Сформувати новий масив, у якому є тільки ті, що більші за 1000 грн.
 let arrayMore1000 = userArray.filter(el => el > 1000).join(`, `)
@@ -25,14 +25,14 @@ document.write(`<div div class= "js-output">1. Prices more 1000: ${arrayMore1000
 //3)Сформувати список з тих цін, які більші за попереднє значення
 
 // 1 вариант записи
-// let arrayMoreOfLast = []
-// userArray.forEach((element, index, baseArr) => {
-//     if (element < baseArr[index + 1])
-//         arrayMoreOfLast.push(baseArr[index])
-// });
+let arrayMoreOfLast = []
+userArray.forEach((element, index, baseArr) => {
+    if (element > baseArr[index - 1])
+        arrayMoreOfLast.push(baseArr[index])
+});
 
 // 2 вариант записи
-const arrayMoreOfLast = userArray.filter((element, index, baseArr) => element > baseArr[index - 1])
+// const arrayMoreOfLast = userArray.filter((element, index, baseArr) => element > baseArr[index - 1])
 document.write(`<div div class= "js-output">3. Prices that are greater than the previous value: ${arrayMoreOfLast}</div>`)
 
 //=============================================================================================

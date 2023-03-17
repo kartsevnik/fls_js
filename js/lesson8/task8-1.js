@@ -17,15 +17,11 @@ console.log(totalEvaluation);
 // Creating Functions
 function getAverageValue(evaluation) {
     let averageValue = 0
-    let quantityValue = 0
-
     for (let i = 0; i < evaluation.length; i++) {
         averageValue += evaluation[i]
-        quantityValue += 1
     }
 
-    averageValue = Math.round(averageValue / quantityValue)
-    return averageValue
+    return averageValue = Math.round(averageValue / evaluation.length)
 }
 
 function getStatusOfSchoolchild(evaluation) {

@@ -25,7 +25,7 @@ function getResultOfGame(nameArray) {
     for (; ;) {
         let enterNum = parseInt(prompt(`Enter num of your elements`, ``))
         if (!enterNum) break
-        enterNum = nameArray[enterNum]
+        enterNum = nameArray[enterNum - 1]
         document.write(`<div div class= "js-output">You entered: ${enterNum}</div>`)
         result += enterNum
     }

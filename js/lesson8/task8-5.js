@@ -42,12 +42,13 @@ function getQuantityOf4and5(nameOfArray) {
 function getBelowAverageGrades(nameOfArray) {
     let res = 0
     let quantity = 0
+
     for (let i = 0; i < nameOfArray.length; i++) {
         res += nameOfArray[i]
-        quantity += 1
     }
-    res = Math.round(res / quantity)
-    quantity = 0
+
+    res = Math.round(res / nameOfArray.length)
+
     for (let j = 0; j < nameOfArray.length; j++) {
         if (nameOfArray[j] < res)
             quantity += 1
