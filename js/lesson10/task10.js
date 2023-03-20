@@ -56,8 +56,8 @@ document.write(`<div div class= "js-output">4. The prices values as a percentage
 // 1 вариант записи
 // function getQuantityOfChangeValue(nameArray) {
 //     let res = 0
-//     for (let i = 0; i < nameArray.length; i++) {
-//         if (nameArray[i] != nameArray[0])
+//     for (let i = 0; i < nameArray.length - 1; i++) {
+//         if (nameArray[i] != nameArray[i - 1])
 //             res += 1
 //     }
 //     return res
@@ -74,7 +74,7 @@ document.write(`<div div class= "js-output">4. The prices values as a percentage
 // let quantityOfChangeValue = getQuantityOfChangeValue(userArray)
 
 // 3 вариант записи
-let quantityOfChangeValue = userArray.reduce((prevResult, element, index) => (element !== element[index]) ? prevResult + 1 : prevResult, 0)
+let quantityOfChangeValue = userArray.reduce((prevResult, element, index, baseArr) => (element[index] !== baseArr[index - 1]) ? prevResult + 1 : prevResult, 0)
 document.write(`<div class= "js-output">5. Count the number of price changes ${quantityOfChangeValue}</div>`)
 
 //=============================================================================================
@@ -179,15 +179,14 @@ document.write(`<div class= "js-output">12. Find the last price that is greater 
 // reversArray = userArray.reverse()
 
 // 2 вариант
-const conditionOflastValueMore1000 = (element) => element > 8000
-const lastValueMore1000 = userArray.findLast(conditionOflastValueMore1000)
+
+const lastValueMore1000 = userArray.findLast((element) => element > 8000)
 
 document.write(` This is ${lastValueMore1000}</div>`)
 
 //13)Знайти індекс останньої  ціни, що більше за 1000
 document.write(`<div class= "js-output">13. Find the index of the last price that is greater than 1000:`)
 
-const conditionOflastIndexMore1000 = (element) => element > 8000
-const lastIndexMore1000 = userArray.findLastIndex(conditionOflastIndexMore1000)
+const lastIndexMore1000 = userArray.findLastIndex((element) => element > 8000)
 
 document.write(` This is ${lastIndexMore1000}</div>`)

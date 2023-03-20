@@ -31,6 +31,7 @@ let result4 = getResult(task11Array, 2, 3, 2, 3)
 
 let result5 = getResult(task11Array, 0, 0, 0, 3) + getResult(task11Array, 2, 2, 0, 3)
 let result6 = getResult(task11Array, 1, 1, 0, 3) + getResult(task11Array, 3, 3, 0, 3)
+
 let result7EvenRows =
     getResult(task11Array, 0, 0, 1, 1) +
     getResult(task11Array, 0, 0, 3, 3) +
@@ -43,9 +44,8 @@ let result7OddRows =
     getResult(task11Array, 3, 3, 0, 0) +
     getResult(task11Array, 3, 3, 2, 2)
 
+
 // Result output
-
-
 
 document.write(`<div class= "js-output" style="padding-top: 20px;" > Result 1: ${result1}</ div> `)
 document.write(`<div class= "js-output" > Result 2: ${result2}</ div> `)

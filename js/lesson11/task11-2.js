@@ -72,30 +72,30 @@ let profitInEveryDay = getProfitInEveryDay(arrayWithProfits, quantityDaysInWeek)
 document.write(`<div class= "js-output" > Result 2 (Profit In Every Day): ${profitInEveryDay}</ div> `)
 
 //3. загальний прибуток за робочі дні
-function getProfitInWorkingDay(tableArray, tableLength) {
+function getProfitInSpecifiedValue(tableArray, dayStart, dayEnd) {
     let sum = 0
     for (let rownumber = 0; rownumber < tableArray.length; rownumber++) {
-        for (let colNumber = 0; colNumber < (tableLength - 2); colNumber++) {
+        for (let colNumber = (dayStart - 1); colNumber <= (dayEnd - 1); colNumber++) {
             sum += tableArray[rownumber][colNumber]
         }
     }
     return sum
 }
-let profitInWorkingDay = getProfitInWorkingDay(arrayWithProfits, quantityDaysInWeek)
+let profitInWorkingDay = getProfitInSpecifiedValue(arrayWithProfits, 1, 5)
 
 document.write(`<div class= "js-output" > Result 3 (All profit In Working Day): ${profitInWorkingDay}</ div> `)
 
 //4. загальний прибуток за вихідні дні
-function getProfitInWeekEnd(tableArray, tableLength) {
-    let sum = 0
-    for (let rownumber = 0; rownumber < tableArray.length; rownumber++) {
-        for (let colNumber = 5; colNumber < tableLength; colNumber++) {
-            sum += tableArray[rownumber][colNumber]
-        }
-    }
-    return sum
-}
-let profitInWeekEnd = getProfitInWeekEnd(arrayWithProfits, quantityDaysInWeek)
+// function getProfitInWeekEnd(tableArray, tableLength) {
+//     let sum = 0
+//     for (let rownumber = 0; rownumber < tableArray.length; rownumber++) {
+//         for (let colNumber = 5; colNumber < tableLength; colNumber++) {
+//             sum += tableArray[rownumber][colNumber]
+//         }
+//     }
+//     return sum
+// }
+let profitInWeekEnd = getProfitInSpecifiedValue(arrayWithProfits, 6, 7)
 
 document.write(`<div class= "js-output" > Result 4 (All profit In Week End): ${profitInWeekEnd}</ div> `)
 
