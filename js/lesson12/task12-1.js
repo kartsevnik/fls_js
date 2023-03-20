@@ -4,7 +4,7 @@ console.log(baseArray);
 
 // =============================================== Creating Base Functions
 function getRandomNum(minV, maxV) {
-    return minV + Math.floor(Math.random() * maxV - minV + 1)
+    return minV + Math.floor(Math.random() * (maxV - minV) + 1)
 }
 
 function getArray1Level(sizeOfArray, minV, maxV) {
