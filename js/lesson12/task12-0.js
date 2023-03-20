@@ -27,3 +27,5 @@ newArray.sort((el1, el2) => {
 
 })
 console.log(newArray);
+document.write(`<div class= "js-output" > Base array: ${baseArray}</ div> `)
+document.write(`<div class= "js-output" > Result: ${newArray}</ div> `)
