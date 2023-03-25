@@ -1,6 +1,6 @@
 // =============================================== Enter the required data
 let baseArray = ['Olga', 'Semen', 'Ilon', 'Samuel', 'Katya', 'Julia', 'Andrew']
-
+baseArray.sort()
 
 // =============================================== Determining the result
 
