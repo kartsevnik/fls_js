@@ -183,6 +183,17 @@ ul.li-list-style {
     text-align: center;
 }
 
+.task14 {
+    text-align: justify;
+    padding-right: 50px;
+    border-right: #FFFFFF 3px solid;
+}
+
+.main-task .task14 p {
+    padding: 0px 0;
+}
+
+
 /* ====================================== */
 
 .header {}
