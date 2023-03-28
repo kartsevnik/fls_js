@@ -505,7 +505,25 @@ function getProductsForSale(nameArray) {
     return result
 }
 
-let productsForSale = getProductsForSale(dataList)
 console.log(`4. List of objects only available for sale of goods:`)
+
+let productsForSale = getProductsForSale(dataList)
 console.log(productsForSale);
+
+//Через for of
+
+let tempArray = []
+for (const product of dataList) {
+    if (product.sell_status === 'available') {
+        tempArray.push
+            ({
+                'id': product.id,
+                'price': product.price,
+                'old_price': product.old_price,
+                'usd_price': product.usd_price,
+            })
+    }
+}
+
+console.log(tempArray);
 // ====================================================================================================================== //
