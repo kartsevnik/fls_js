@@ -103,11 +103,12 @@ console.log('6. Organize the list in descending order of profit:');
 console.log(newArray);
 // 7. Створити 2 окремих списки з копіями об’єктів, що містять сайти з вартість до 10000 і більше 10000
 console.log('7. Create 2 separate lists with copies of objects containing sites with a value of 10000 or more 10000:');
-
-const costsMin10000 = listOfWorks.filter(site => site.costOfSite <= 10000);
+let costsMin10000 = JSON.parse(JSON.stringify(listOfWorks))
+costsMin10000 = costsMin10000.filter(site => site.costOfSite <= 10000);
 console.log(costsMin10000);
 
-let costsMore10000 = listOfWorks.filter(site => site.costOfSite > 10000);
+let costsMore10000 = JSON.parse(JSON.stringify(listOfWorks))
+costsMore10000 = listOfWorks.filter(site => site.costOfSite > 10000);
 console.log(costsMore10000);
 
 
