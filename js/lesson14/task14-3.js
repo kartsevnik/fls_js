@@ -492,13 +492,15 @@ function getProductsForSale(nameArray) {
 
     for (let i = 0; i < nameArray.length; i++) {
         let tempObject = []
-        tempObject.push(
-            ['id', nameArray[i]["id"]],
-            ['price', nameArray[i]["price"]],
-            ['old_price', nameArray[i]["old_price"]],
-            ['usd_price', nameArray[i]["usd_price"]])
-        tempObject = Object.fromEntries(tempObject)
-        result.push(tempObject)
+        if (nameArray[i].sell_status === 'available') {
+            tempObject.push(
+                ['id', nameArray[i]["id"]],
+                ['price', nameArray[i]["price"]],
+                ['old_price', nameArray[i]["old_price"]],
+                ['usd_price', nameArray[i]["usd_price"]])
+            tempObject = Object.fromEntries(tempObject)
+            result.push(tempObject)
+        }
     }
     return result
 }
