@@ -455,11 +455,11 @@ let dataList = [
     }]
 
 //1 Загальну вартість (нові ціни - price)
-let totalSumOfPrices = dataList.reduce((preSum, product) => preSum += product.price, 0)
+let totalSumOfPrices = dataList.reduce((preSum, product) => preSum + product.price, 0)
 console.log(`1. Total cost: ${totalSumOfPrices}`);
 
 //2 Знайти кількість товарів, у яких ціна зменшилась (price < old_price)
-let getQuantityProductsLessOldPrice = dataList.reduce((preSum, product) => product.price < product.old_price ? preSum += 1 : preSum, 0)
+let getQuantityProductsLessOldPrice = dataList.reduce((preSum, product) => product.price < product.old_price ? preSum + 1 : preSum, 0)
 console.log(`2. Find the number of goods in which the price has decreased: ${getQuantityProductsLessOldPrice}`);
 
 //3 Товари, які доступні (sell_status:"available")
@@ -475,7 +475,7 @@ const getAvailableProductsArr = newArrForProducts.map((product) => product.sell_
 console.log(getAvailableProductsArr);
 
 // На выходе строка
-let getAvailableProductsString = newArrForProducts.reduce((preSum, product) => product.sell_status = "available" ? preSum += product.id + `, ` : preSum, [])
+let getAvailableProductsString = newArrForProducts.reduce((preSum, product) => product.sell_status = "available" ? preSum + product.id + `, ` : preSum, [])
 console.log(`3. Goods that are available: ${getAvailableProductsString}`);
 
 

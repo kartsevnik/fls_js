@@ -88,8 +88,20 @@ console.log('4. Create a general list of all sponsors (while they can be repeate
 console.log(exportSponsors);
 
 // 5. знайти рік, коли прибуток був найбільшим
-let successfulYear = listOfWorks.reduce((preArr, site) =>
-    (site.costOfSite >= preArr) ? preArr = site.graduationYear : preArr, 0)
+
+function getSuccessfulYear(nameOfArray) {
+    let result = 0
+    let temp = 0
+    for (const element of nameOfArray) {
+        if (element.costOfSite > temp) {
+            temp = element.costOfSite
+            result = element.graduationYear
+        }
+    }
+    return result
+}
+let successfulYear = getSuccessfulYear(listOfWorks)
+
 console.log(`5. Find the year when the profit was the highest: ${successfulYear}`);
 
 // 6. упорядкувати список за спаданням прибутку
