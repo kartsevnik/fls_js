@@ -39,7 +39,7 @@ class DanceHead {
 
     // =========> method: Метод run , який ініціює через кожні 5 секунд виведення нової пари для танців
     run() {
-        let timeoutID = setInterval(() => {
+        setInterval(() => {
             alert(`Partners: ${this.getRandomBoy()} and ${this.getRandomGirl()}`)
         }, 5000);
     }
