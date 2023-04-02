@@ -10,10 +10,52 @@
 //          render - виведення інформації про тестування на екран
 
 
-// ====================================================================================================================== //
-
 
 // ====================================================================================================================== //
+class MultChecker {
+    constructor(checkNumber) {
+        this.checkNumber = checkNumber
+        this.correctNum = 0
+        this.incorrectNum = 0
+    }
 
+    // =========> method:
+    randomNum(minV, maxV) {
+        return minV + Math.floor(Math.random() * maxV - minV + 1)
+    }
+    // =========> method:
+    genExample() {
+        const randomNumber = this.randomNum(1, 9)
+        const example = this.checkNumber * randomNumber
+        const askUser = parseInt(prompt(`${this.checkNumber} * ${randomNumber} = `))
+        if (askUser === example) {
+            return true
+        } else return false
+    }
+    // =========> method:
+    checkingAnswer(resultOfExample) {
+        if (resultOfExample) {
+            this.correctNum += 1
+        } else this.incorrectNum += 1
+    }
+    // =========> method:
+    toString() {
+        console.log(`Ви відповіли ${initChecker.correctNum} разів правильно та ${initChecker.incorrectNum} разів неправильно`);
+        document.write(`<div class= "js-output" >Ви відповіли ${initChecker.correctNum} разів правильно та ${initChecker.incorrectNum} разів неправильно</div>`)
+    }
+}
+
+// ====================================================================================================================== //
+
+const enterCheckNumber = parseInt(prompt(`Яке число будемо перемножувати?`))
+const initChecker = new MultChecker(enterCheckNumber)
+
+let confirmExercise
+do {
+    initChecker.checkingAnswer(initChecker.genExample())
+    confirmExercise = confirm(`Ще приклад?`)
+} while (confirmExercise);
+
+const exportResult = initChecker.toString()
 
 // ====================================================================================================================== //
