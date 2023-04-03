@@ -50,7 +50,7 @@ class DanceHead {
 let initClass = new DanceHead
 console.log(initClass.getRandomBoy());
 console.log(initClass.getRandomGirl());
-document.write(`<div class= "js-output" > Partners: ${initClass.toString(initClass.boys)} and ${initClass.toString(initClass.girls)}</div>`)
+document.write(`<div class= "js-output"> Partners: ${initClass.toString(initClass.boys)} and ${initClass.toString(initClass.girls)}</div>`)
 console.log(`Partners: ${initClass.toString(initClass.boys)} and ${initClass.toString(initClass.girls)}`);
 initClass.run()
 
