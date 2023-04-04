@@ -16,8 +16,6 @@ let enterYear = now.getFullYear()
 
 // Массив значень відносно 31 дня у місяці
 const limitOfMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
-const limitOfMonth2 = [0, -3, 0, -1, 0, -1, 0, 0, -1, 0, -1, 0]
-
 
 class TDate {
     constructor(day, month, year) {
@@ -25,6 +23,7 @@ class TDate {
         this.month = month
         this.year = year
     }
+    // Реалізувати методи збільшення дати на певну кількість днів, місяців чи років.
     // =========> method:
     increaseYear(value) {
         this.year += value
@@ -35,6 +34,10 @@ class TDate {
         this.month += value
         this.increaseYear(Math.floor(this.month / 12))
         this.month = this.month % 12
+        if (this.month === 0) {
+            this.month = 12
+            this.year -= 1
+        }
     }
 
     // =========> method:
@@ -79,6 +82,39 @@ class TDate {
         } else this.day + value
 
     }
+
+    // Реалізувати методи зменшення дати на певну кількість днів, місяців чи років.
+    // =========> method:
+    decreaseYear(value) {
+        this.year -= value
+    }
+
+    // =========> method:
+    decreaseMonth(value) {
+        this.month -= value
+        //Передаем данные для расчета года
+        let allOfMonth = 12 + (this.month * (-1))
+        this.decreaseYear(Math.floor(allOfMonth / 12))
+        // если месяц уходит в негативное значение, то...
+        if (this.month < 0) {
+            // создаем переменную с переводом значения в + для дальнейшего удобства
+            let convertNegativeMonth = this.month * (-1)
+            //Если месяцев больше чем 12 используем остаток от деления
+            if (convertNegativeMonth > 12) {
+                this.month = 12 - (convertNegativeMonth % 12)
+                //Если месяцев меньше чем 12 то просто вычитаем
+            } else this.month = 12 - convertNegativeMonth
+        }
+
+        if (this.month === 0) {
+            this.month = 12
+        }
+    }
+
+    // =========> method:
+
+
+    // Введення та виведення дати реалізувати за допомогою методу  toString.
     toString() {
         return document.write(`<div class= "js-output"> Result date is: ${this.day}/${this.month}/${this.year}</div>`)
     }
@@ -87,9 +123,14 @@ class TDate {
 
 let initDate = new TDate(enterDay, enterMonth, enterYear)
 
+// Реалізувати методи збільшення дати
 // initDate.increaseYear(5)
-// initDate.increaseMonth(11)
-initDate.increaseDay(1000, limitOfMonth)
+// initDate.increaseMonth(8)
+// initDate.increaseDay(1000, limitOfMonth)
+
+// Реалізувати методи зменшення дати
+// initDate.decreaseYear(5)
+initDate.decreaseMonth(17)
 initDate.toString()
 
 
