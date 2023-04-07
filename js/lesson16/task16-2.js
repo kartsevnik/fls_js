@@ -14,7 +14,7 @@ class TMoney {
     }
 
     get UserCountInUSD() {
-        return this.#userCountInUSD
+        return this.#userCountInUSD * this.courseOfDollars
     }
 
     set UserCountInUSD(value) {
