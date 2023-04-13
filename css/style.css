@@ -173,11 +173,14 @@ ul.li-list-style {
 }
 
 .lesson10 {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 50px;
     justify-content: center;
     text-align: left;
     gap: 50px;
-    /* padding: 0 20px; */
+    position: relative;
+    margin-bottom: 50px;
 }
 
 .lesson10 h2 {
@@ -191,14 +194,20 @@ ul.li-list-style {
 
 .task14 {
     text-align: justify;
-    padding-right: 50px;
+    /* padding-right: 50px; */
 
     display: flex;
     flex-direction: column;
 }
 
-.task14:first-child {
-    border-right: #FFFFFF 3px solid;
+.lesson10::after {
+    content: '';
+    width: 3px;
+    height: 100%;
+    background-color: #00C4F0;
+    top: 0;
+    right: 50%;
+    position: absolute;
 }
 
 .main-task .task14 p {
