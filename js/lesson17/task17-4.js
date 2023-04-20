@@ -12,17 +12,17 @@
 // ====================================================================================================================== //
 class FirmOfProduct {
     constructor(name, registrationNumber) {
-        this.name = name;
-        this.registrationNumber = registrationNumber;
+        this.name = name
+        this.registrationNumber = registrationNumber
     }
 }
 
 class Product {
     constructor(name, unit, quantity, company) {
-        this.name = name;
-        this.unit = unit;
-        this.quantity = quantity;
-        this.company = new FirmOfProduct(company.name, company.registrationNumber);
+        this.name = name
+        this.unit = unit
+        this.quantity = quantity
+        this.company = new FirmOfProduct(company.name, company.registrationNumber)
     }
 }
 
@@ -43,11 +43,11 @@ class BaseOfProduct {
     getProducts() {
         return this.products;
     }
-    // Зареєструвати новий товар або додати кількість існуючого товару,
+    // Зареєструвати новий товар або додати кількість до існуючого товару,
     addProduct(Product) {
         for (let i = 0; i < this.products.length; i++) {
             if (this.products[i].name == Product.name) {
-                return this.products[i].quantity += Product.quantity;
+                return this.products[i].quantity += Product.quantity
             }
         }
         this.products.push(Product);
@@ -58,49 +58,47 @@ class BaseOfProduct {
         for (let i = 0; i < this.products.length; i++) {
             if (this.products[i].name == name) {
                 if (this.products[i].quantity >= quantity) {
-                    this.products[i].quantity -= quantity;
-                    console.log(`На складі залишилось ${this.products[i].quantity} ${this.products[i].unit} товарів ${name} `);
+                    this.products[i].quantity -= quantity
+                    console.log(`На складі залишилось ${this.products[i].quantity} ${this.products[i].unit} товарів ${name} `)
                 }
-                else console.log(`Недостатньо товарів для відвантаження ${name}, на складі залишилось лише ${this.products[i].quantity} ${this.products[i].unit}`);
+                else console.log(`Недостатньо товарів для відвантаження ${name}, на складі залишилось лише ${this.products[i].quantity} ${this.products[i].unit}`)
             }
         }
     }
 
     // Фільтрація за назвою товару
     filteredOfProductName(productName) {
-        let result = this.products.filter(product => product.name == productName);
-        return result;
+        return this.products.filter(product => product.name == productName)
     }
 
     // Фільтрація за назвою фірми
     filteredOfCompanyName(companyName) {
-        let result = this.products.filter(product => product.company.name == companyName);
-        return result;
+        return this.products.filter(product => product.company.name == companyName)
     }
 }
 
 // Створили нову базу товарів
-let newBaseOfProduct = new BaseOfProduct(arrayOfProducts);
+let newBaseOfProduct = new BaseOfProduct(arrayOfProducts)
 
 // Зареєстрували новий товар 
-let newProduct1 = newBaseOfProduct.addProduct(new Product("Cari", "кг", 1000, new FirmOfProduct("Fir4", "111111")));
+let newProduct1 = newBaseOfProduct.addProduct(new Product("Cari", "кг", 1000, new FirmOfProduct("Fir4", "111111")))
 
 // Додали кількість існуючого товару
-let newProduct2 = newBaseOfProduct.addProduct(new Product("Cari", "кг", 1000, new FirmOfProduct("Fir4", "111111")));
+let newProduct2 = newBaseOfProduct.addProduct(new Product("Cari", "кг", 1000, new FirmOfProduct("Fir4", "111111")))
 
 // Провели відвантаження товарів,
-newBaseOfProduct.shipmentOfProducts("Радіо", 10);
-newBaseOfProduct.shipmentOfProducts("Сіль", 1000);
+newBaseOfProduct.shipmentOfProducts("Радіо", 10)
+newBaseOfProduct.shipmentOfProducts("Сіль", 1000)
 
 // Фільтрація за назвою товару
-let findProductCari = newBaseOfProduct.filteredOfProductName(`Cari`);
-console.log(findProductCari);
+let findProductCari = newBaseOfProduct.filteredOfProductName(`Cari`)
+console.log(findProductCari)
 
 // Фільтрація за назвою фірми
-let findCompanyFir2 = newBaseOfProduct.filteredOfCompanyName(`Fir2`);
-console.log(findCompanyFir2);
+let findCompanyFir2 = newBaseOfProduct.filteredOfCompanyName(`Fir2`)
+console.log(findCompanyFir2)
 
-console.log(newBaseOfProduct.getProducts());
+console.log(newBaseOfProduct.getProducts())
 
 // ====================================================================================================================== //
 
