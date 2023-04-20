@@ -118,10 +118,7 @@ class Library {
 
         //Получаем ключи (параметры)
         let keys = Object.keys(this.sections)
-        // Тут я конвертировал секцию с массива в объект, но параметры почему то все равно остались в массиве
-        // console.log(this.sections);
-        // let newObj = Object.assign({}, this.sections);
-        // this.sections = newObj
+
         // Фильтрация и распределение книг по секциям
         for (let genre = 0; genre < keys.length; genre++) {
             for (let i = 0; i < Library.booksList.length; i++) {
@@ -132,45 +129,85 @@ class Library {
         }
     }
 
-    addBook(book) {
+    static addBook(book) {
         Library.booksList.push(book);
     }
 
-    removeBook(nameOfBook) {
-        Library.books
+    static removeBook(nameOfBook) {
+        let findIndexBook = Library.booksList.findIndex(
+            (book) => book.title == nameOfBook
+        )
+        if (findIndexBook == -1) {
+            return console.log(`Нет такой книги`);
+        }
+        return Library.booksList.splice(findIndexBook, 1);
+    }
+
+    static findBook(nameOfBook) {
+        let findBook = Library.booksList.find(
+            (book) => book.title == nameOfBook
+        )
+        if (findBook == undefined) {
+            return console.log(`В библиотеке нет такой книги`);
+        }
+        console.log(`В библиотеке есть книга: ${findBook.title}`);
+        return findBook
+    }
+
+    static findAuthor(nameOfAuthor) {
+        let findAuthor = Library.booksList.find(
+            (book) => book.author.name == nameOfAuthor
+        )
+        if (findAuthor == undefined) {
+            return console.log(`В библиотеке нет такого автора`);
+        }
+        console.log(`В библиотеке есть такой автор: ${findAuthor.author}`);
+        return findAuthor
+    }
+
+    static findPublisher(nameOfPublisher) {
+        let findPublisher = Library.booksList.find(
+            (book) => book.publisher.title == nameOfPublisher
+        )
+        if (findPublisher == undefined) {
+            return console.log(`В библиотеке нет такого автора`);
+        }
+        console.log(`В библиотеке есть такой издатель: ${findPublisher.publisher}`);
+        return findPublisher
     }
 
     toString() {
         return `${Library.booksList}, ${this.sections}`;
     }
 }
-
+// Создание библиотеки
 let library = new Library(books, []);
-let sections = library.addSection()
+// Вызов метода создания секций
+let initSections1 = library.addSection()
 
-
-library.addBook(new Book(new Author({ name: "Майкл2 Микалко2", dateOfBirth: "22.01.1940", description: "Майкл Микалко — эксперт по креативности с мировым именем. Будучи офицером американской армии, он собрал экспертов НАТО и учёных из разных стран, чтобы изучить и классифицировать доступные методы творческого мышления. Вместе с командой он опробовал эти методы в решении военных и социально-политических задач." }),
+// Добавляем книги
+Library.addBook(new Book(new Author({ name: "Майкл2 Микалко2", dateOfBirth: "22.01.1940", description: "Майкл Микалко — эксперт по креативности с мировым именем. Будучи офицером американской армии, он собрал экспертов НАТО и учёных из разных стран, чтобы изучить и классифицировать доступные методы творческого мышления. Вместе с командой он опробовал эти методы в решении военных и социально-политических задач." }),
     "2 Рисовый штурм",
     "Self-development",
     new Publisher({ title: "Миф", registrationNumber: "112-0-452-01120-4", yearOfExecuting: "2015" })),)
-library.addBook(new Book(new Author({ name: "Майкл3 Микалко3", dateOfBirth: "22.01.1940", description: "Майкл Микалко — эксперт по креативности с мировым именем. Будучи офицером американской армии, он собрал экспертов НАТО и учёных из разных стран, чтобы изучить и классифицировать доступные методы творческого мышления. Вместе с командой он опробовал эти методы в решении военных и социально-политических задач." }),
+Library.addBook(new Book(new Author({ name: "Майкл3 Микалко3", dateOfBirth: "22.01.1940", description: "Майкл Микалко — эксперт по креативности с мировым именем. Будучи офицером американской армии, он собрал экспертов НАТО и учёных из разных стран, чтобы изучить и классифицировать доступные методы творческого мышления. Вместе с командой он опробовал эти методы в решении военных и социально-политических задач." }),
     "3 Рисовый штурм",
     "Self-development",
     new Publisher({ title: "Миф", registrationNumber: "112-0-452-01120-4", yearOfExecuting: "2015" })),)
 
-let sections2 = library.addSection()
+// Повторный вызов метода создания секций
+let initSections2 = library.addSection()
+// Удаляем книгу
+let remove6Book = Library.removeBook("2 Рисовый штурм")
+
+// Поиск книги
+let find1Book = Library.findBook("Грокаем алгоритмы")
+// Поиск автора
+let find3Author = Library.findAuthor("Эрик Фримен")
+// Поиск издателя
+let findPublisher = Library.findPublisher("Миф")
+
+// ====================================================================================================================== //
 console.log(library.sections);
 console.log(Library.booksList);
 // ====================================================================================================================== //
-
-// ====================================================================================================================== //
-
-// obj = { a: 1, b: 2, c: 3 }
-
-// keys = Object.keys(obj)
-
-// for (var i = 0, l = keys.length; i < l; i++) {
-//     console.log(keys[i] + ' is ' + obj[keys[i]]);
-    // keys[i] - это ключ
-    // obj[keys[i]] - а это свойство, доступное по этому ключу
-// }
