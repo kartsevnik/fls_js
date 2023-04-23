@@ -41,7 +41,6 @@
                         (авто, автобус, літак - випадаючий список), харчування (сніданок, обід, вечеря – checkbоx) та
                         одного з 3-х гідів(використати - radio buttons). Ціни визначте самі. Підрахувати загальну
                         вартість.</h2>
-
                 </div>
 
                 <div class="block_with_task_en task14">
@@ -54,6 +53,52 @@
 
             </div>
 
+            <div class="resolve">
+
+                <div class="task_18-2 buttons">
+                    <label for="transport">Select the type of transport</label>
+                    <select name="currency" id="transport">
+                        <option value="350">Car</option>
+                        <option value="200">Bus</option>
+                        <option value="700">Plane</option>
+                    </select>
+                </div>
+
+                <div class="task_18-2 buttons">
+                    <h3>Choose a diet:</h3>
+                    <label for="breakfast">Breakfast</label>
+                    <input type="checkbox" id="breakfast" name="breakfast" value="15">
+                    <label for="lunch">Lunch</label>
+                    <input type="checkbox" id="lunch" name="lunch" value="25">
+                    <label for="dinner">Dinner</label>
+                    <input type="checkbox" id="dinner" name="dinner" value="45">
+                </div>
+
+                <div class="task_18-2 buttons">
+                    <h3>Choose a guide:</h3>
+                    <div id="guides">
+                        <label for="guide1">Guide 1</label>
+                        <input type="radio" id="guide1" name="guide" value="120">
+
+                        <label for="guide2">Guide 2</label>
+                        <input type="radio" id="guide2" name="guide" value="140">
+
+                        <label for="guide3">Guide 3</label>
+                        <input type="radio" id="guide3" name="guide" value="100">
+                    </div>
+                </div>
+
+
+
+
+
+
+                <div class="task_18-2 buttons">
+                    <button id="calculate" onclick="calculate()">Calculate</button>
+                </div>
+
+                <div class="innerTable task_18-2 buttons result"></div>
+            </div>
         </main>
         <script src="../../js/lesson18/task18-7.js"></script>
     </div>

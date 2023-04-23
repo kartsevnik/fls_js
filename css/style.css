@@ -214,6 +214,110 @@ ul.li-list-style {
     padding: 0px 0;
 }
 
+.resolve {
+    border: #ffffff 1px solid;
+    border-radius: 20px;
+    max-width: 450px;
+    align-self: center;
+    text-align: center;
+    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 10px;
+
+}
+
+
+.resolve input {
+    margin-top: 5px;
+    outline: #ffffff 2px solid;
+    border-radius: 20px;
+    padding-left: 5px;
+}
+
+.resolve input:hover {
+    outline: #00C4F0 2px solid;
+    transition: all 0.3s ease 0s;
+}
+
+.resolve input:focus {
+    outline: #00C4F0 2px solid;
+    transition: all 0.3s ease 0s;
+}
+
+
+.resolve .buttons {
+    grid-column: span 2;
+    padding-top: 15px;
+}
+
+.resolve .result {
+    grid-column: span 2;
+    text-align: center;
+    padding: 15px;
+    display: grid;
+}
+
+.result input {
+    text-align: center;
+}
+
+.buttons button {
+    border: #ffffff 1px solid;
+    border-radius: 20px;
+    padding: 5px 15px;
+    margin: 0 10px;
+}
+
+.buttons button:hover {
+    color: #00C4F0;
+    border: #00C4F0 1px solid;
+    transition: all 0.3s ease 0s;
+}
+
+.buttons button:focus {
+    color: #00C4F0;
+    border: #00C4F0 1px solid;
+    outline: 0px;
+    transition: all 0.3s ease 0s;
+}
+
+.task_18-2 input {
+    border-radius: 0px;
+    padding: 10px;
+    margin: 10px 0;
+    width: 90%;
+}
+
+
+
+.task_18-2 button {
+    border-radius: 0px;
+}
+
+.task_18-2 select {
+    margin: 10px 0;
+    outline: #ffffff 2px solid;
+    padding: 10px;
+    width: 90%;
+}
+
+.task_18-2 option {
+    outline: #ffffff 2px solid;
+    color: #000;
+    margin: 10px 0;
+}
+
+.task_18-2 select:focus {
+    color: #00C4F0;
+    outline: #00C4F0 1px solid;
+    transition: all 0.3s ease 0s;
+}
+
+.task_18-2.result input:last-child {
+    width: 100%;
+    margin-bottom: 0;
+}
 
 /* ====================================== */
 
@@ -242,6 +346,8 @@ ul.li-list-style {
 .main-task {
     padding: 30px 0;
     text-align: center;
+    display: flex;
+    flex-direction: column;
 }
 
 .main-task h3 {

@@ -38,15 +38,43 @@
 
                 <div class="block_with_task_ua task14">
                     <h2>Зробити конвертер валют (курси валют – константи у скрипті)</h2>
-
                 </div>
 
                 <div class="block_with_task_en task14">
-
-
                     <h2>Make currency converter (currency rates - script constants)</h2>
                 </div>
 
+            </div>
+
+            <div class="resolve">
+                <div class="task_18-2"><label for="firstCurrency"></label>
+                    <select name="currency" id="firstCurrency">
+                        <option value="USD">USD</option>
+                        <option value="EUR">EUR</option>
+                        <option value="UAH">UAH</option>
+                    </select>
+                </div>
+                <div class="task_18-2"><label for="secondCurrency"></label>
+                    <select name="currency" id="secondCurrency">
+                        <option class="option" value="USD">USD</option>
+                        <option value="EUR">EUR</option>
+                        <option value="UAH">UAH</option>
+                    </select>
+                </div>
+                <div class="task_18-2">
+                    <label for="firstNumber"></label><input type="text" id="firstNumber" placeholder="0">
+                </div>
+                <div class="task_18-2">
+                    <label for="result"></label><input type="text" id="result" placeholder="0">
+                </div>
+
+
+                <div class="task_18-2 buttons">
+                    <button id="change" onclick="change()">Change</button>
+                    <button id="convert" onclick="convert()">Convert</button>
+                </div>
+                <!-- 
+                <div class="task_18-2 result"><label for="result">Result </label><input type="text" id="result"></div> -->
             </div>
 
         </main>
