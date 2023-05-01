@@ -415,3 +415,141 @@ ul.li-list-style {
 }
 
 .footer {}
+
+/* ================19-1=================== */
+
+.resolve.task19-1 {
+    max-width: 100%;
+    display: flex;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+
+}
+
+.card {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px 0;
+    margin: 0 5px;
+    transition: all 0.3s ease 0s;
+
+}
+
+.card__image {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+
+.card__image img {
+    width: 90%;
+    object-fit: cover;
+}
+
+.card__description {}
+
+.card__title {}
+
+.card__price {}
+
+.card__id {}
+
+.checked {
+    outline: #00C4F0 2px solid;
+    transition: all 0.3s ease 0s;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.47);
+    border-radius: 20px;
+}
+
+/* ================19-2=================== */
+.resolve.task19-2 {
+    max-width: 100%;
+    gap: 50px;
+}
+
+.table__athletes {
+    display: flex;
+    /* justify-content: space-between; */
+
+}
+
+.athletes__all {
+    position: relative;
+}
+
+.athletes__all::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -25px;
+    background-color: #00C4F0;
+    width: 3px;
+    height: 100%;
+}
+
+.athlet_left,
+.athlet_right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.athlet__name {}
+
+.athlet__arrow {}
+
+.athlet__arrow_right img {
+    width: 40%;
+}
+
+.athlet__arrow_left img {
+    width: 40%;
+}
+
+.athletes__selected {}
+
+/* ================19-3=================== */
+
+.snow__image {
+    position: fixed;
+    transform: rotate(0deg);
+    top: 0;
+    left: 0;
+    width: 3%;
+}
+
+/* ================19-4=================== */
+
+.star__image {
+    position: fixed;
+    transform: scale(0.1);
+    /* transform: scale3d(2); */
+    top: 0;
+    left: 0;
+    width: 3%;
+}
+
+/* ================19-4=================== */
+
+
+.tank__image {
+    position: fixed;
+    transform: scale(1);
+    top: 0;
+    left: 0;
+    width: 15%;
+}
+
+.tank-with-trator__image {
+    position: fixed;
+    transform: scale(1);
+    top: 0;
+    left: 0;
+    width: 30%;
+}
