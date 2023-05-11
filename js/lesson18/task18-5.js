@@ -16,22 +16,19 @@ function generate() {
     let rows = document.getElementById(`usersRows`).value
 
     let table = `<h2 style="padding: 10px 0">Table ${columns}*${rows} with random numbers</h2>`
+    table += `<table class="table" style="text-align: center; padding-bottom: 10px">`
 
-    for (let t = 1; t <= 1; t++) {
-        table += `<table class="table" style="text-align: center; padding-bottom: 10px">`
+    for (let tr = 0; tr < rows; tr++) {
 
-        for (let tr = 0; tr < rows; tr++) {
+        table += `<tr>`
 
-            table += `<tr>`
-
-            for (let td = 1; td <= columns; td++) {
-                table += `<td style="border: 1px solid #fff;">${randomNum(0, 100)}</td>`
-            }
-            table += `</tr>`
+        for (let td = 1; td <= columns; td++) {
+            table += `<td style="border: 1px solid #fff;">${randomNum(0, 100)}</td>`
         }
-
-        table += `</table>`
+        table += `</tr>`
     }
+
+    table += `</table>`
 
     document.querySelector(`.innerTable`).innerHTML = table
 }

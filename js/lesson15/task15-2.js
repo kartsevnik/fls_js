@@ -34,7 +34,7 @@ function Auto(mark, tank, av_liters, seats, passengers) {
 Auto.prototype.getRefueling = function (numberOfLiters) {
     if (numberOfLiters <= this.tank - this.av_liters) {
         this.av_liters = this.av_liters + numberOfLiters
-        return `Вы заправились на ${numberOfLiters} литров и в вашем баке сейчас ${this.av_liters} литров`
+        return `You refuel ${numberOfLiters} liters and in your tank is now ${this.av_liters} liters`
     } else return `Вы заправились только на ${this.tank - this.av_liters} литров, так как в вашем баке уже было ${this.av_liters} литров, остальные ${numberOfLiters - (this.tank - this.av_liters)} можете не оплачивать`
 }
 

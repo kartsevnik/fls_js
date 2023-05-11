@@ -9,11 +9,14 @@
 //          Метод виведення пари для танців
 //          Метод run , який ініціює через кожні 5 секунд виведення нової пари для танців
 
-// ====================================================================================================================== //
+// ====================================================================================================================== //c
+const boys = ['Jon', 'Bill', 'Egor', 'Ernast', 'Vasya', 'Nikolo', 'Antonio']
+const girls = ['Emilia', 'Lisa', 'Nata', 'Vittoria', 'Vasilisa', 'Ninel', 'Lietta']
+
 class DanceHead {
-    constructor() {
-        this.boys = ['Jon', 'Bill', 'Egor', 'Ernast', 'Vasya', 'Nikolo', 'Antonio']
-        this.girls = ['Emilia', 'Lisa', 'Nata', 'Vittoria', 'Vasilisa', 'Ninel', 'Lietta']
+    constructor(boys, girls) {
+        this.boys = boys
+        this.girls = girls
     }
 
     // =========> method:
@@ -47,7 +50,7 @@ class DanceHead {
 }
 // ====================================================================================================================== //
 
-let initClass = new DanceHead
+let initClass = new DanceHead(boys, girls)
 console.log(initClass.getRandomBoy());
 console.log(initClass.getRandomGirl());
 document.write(`<div class= "js-output"> Partners: ${initClass.toString(initClass.boys)} and ${initClass.toString(initClass.girls)}</div>`)

@@ -170,8 +170,7 @@ class Firm {
 
     // виведення на екран послуг, що можуть бути виконані за вказану суму грошей та вказаний термін часу;
     findServices(amountOfMoney, period) {
-        let arr = [...this.Services]
-        return arr.filter(element => element.Cost < amountOfMoney && element.Execution < period)
+        return this.Services.filter(element => element.Cost < amountOfMoney && element.Execution < period)
     }
 
     toString() {

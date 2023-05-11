@@ -40,7 +40,6 @@ function convert() {
 
 window.onload = function () {
     document.getElementById('convert').onclick = convert
-    // document.querySelector('#firstCurrency').onchange = convert
     document.querySelector('#firstNumber').onchange = convert
 }
 
@@ -59,7 +58,6 @@ function change() {
 
 window.onload = function () {
     document.getElementById('change').onclick = change
-    // document.getElementById('change').onclick = change
 }
 // ====================================================================================================================== //
 

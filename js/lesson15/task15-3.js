@@ -40,8 +40,8 @@ class MultChecker {
     }
     // =========> method:
     toString() {
-        console.log(`Ви відповіли ${initChecker.correctNum} разів правильно та ${initChecker.incorrectNum} разів неправильно`);
-        document.write(`<div class= "js-output" >Ви відповіли ${initChecker.correctNum} разів правильно та ${initChecker.incorrectNum} разів неправильно</div>`)
+        console.log(`Ви відповіли ${this.correctNum} разів правильно та ${this.incorrectNum} разів неправильно`);
+        document.write(`<div class= "js-output" >Ви відповіли ${this.correctNum} разів правильно та ${this.incorrectNum} разів неправильно</div>`)
     }
 }
 

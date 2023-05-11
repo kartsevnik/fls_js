@@ -46,10 +46,10 @@ class Reminder {
 
 
 // ====================================================================================================================== //
-let result = new Reminder(`old text`, 3)
+let result = new Reminder(`old text`, 1)
 let initReminder = Reminder.initReminder()
-let changeText = Reminder.changeText(`new text`, 3)
-let stopReminder = setTimeout(() => Reminder.stopReminder(), 10000);
+let changeText = Reminder.changeText(`new text`, 5)
+let stopReminder = setTimeout(() => Reminder.stopReminder(), 15000);
 
 // ====================================================================================================================== //
 

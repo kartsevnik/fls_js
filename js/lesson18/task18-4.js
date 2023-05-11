@@ -10,19 +10,17 @@ function randomWish(nameOfArray) {
     return nameOfArray[Math.floor(Math.random() * nameOfArray.length)]
 }
 
-let findResolve = document.querySelector(`.resolve`)
+function initWishes(nameOfArray, selector) {
+    let findResolve = document.querySelector(selector)
 
-for (let i = 0; i < 3; i++) {
-    let insertDiv = document.createElement('div')
-    let wish1 = findResolve.append(insertDiv)
+    for (let i = 0; i < 3; i++) {
+        let insertDiv = document.createElement('div')
+        insertDiv.innerText = randomWish(nameOfArray)
+        findResolve.append(insertDiv)
+    }
 }
 
-let findDiv = findResolve.querySelectorAll(`div`)
-
-for (let i = 0; i < findDiv.length; i++) {
-    findDiv[i].append(randomWish(wishList))
-}
-
+let result = initWishes(wishList, `.resolve`)
 
 
 // ====================================================================================================================== //
