@@ -8,6 +8,102 @@
     <title>Class: Task 20-6</title>
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="shortcut icon" href="../../img/js-file.png" type="image/x-icon">
+    <style>
+        .wrapper {
+            padding: 20px;
+        }
+
+        .resolve20_6 {
+            display: flex;
+            flex-direction: column;
+            min-width: 50%;
+
+            margin: 15px 0;
+            font-size: 18px;
+
+            border: #ffffff 1px solid;
+            border-radius: 20px;
+            padding: 30px;
+            align-self: center;
+            text-align: center;
+        }
+
+        .resolve20_6 input {
+            margin: 10px 0;
+            height: 35px;
+            padding-left: 15px;
+        }
+
+        .btn_20_6 {
+            margin-top: 10px;
+            border: #ffffff 1px solid;
+            transition: all 0.3s ease 0s;
+            padding: 10px 0;
+        }
+
+        .btn_20_6:hover {
+            color: #00C4F0;
+            border: #00C4F0 1px solid;
+        }
+
+        .btn_add_task {
+            padding: 10px 35px;
+            align-self: center;
+        }
+
+        .resolve20_6__title {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .added-task {
+            /* display: grid;
+            grid-template-columns: 1fr 50px 100px;
+            align-self: center; */
+            display: flex;
+            gap: 15px;
+            margin: 15px 0;
+            border: #00C4F0 1px solid;
+            width: 100%;
+            padding: 15px;
+        }
+
+        .added-task_text {
+            text-align: justify;
+            align-self: center;
+            flex: 1;
+        }
+
+        .added-task_priority {
+            align-self: center;
+            max-width: 150px;
+        }
+
+        .btn_delete-task {
+            border: #ffffff 1px solid;
+            padding: 10px 20px;
+            align-self: center;
+        }
+
+        .btn_delete-task:hover {
+            color: #00C4F0;
+            border: #00C4F0 1px solid;
+            transition: all 0.3s ease 0s;
+        }
+
+        .buttons-block {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .sortByName {
+            padding: 11px 15px;
+            /* background-color: #2D2D2D;
+            color: #fff; */
+        }
+
+        .buttons-block__sort {}
+    </style>
 </head>
 
 <body>
@@ -52,7 +148,32 @@
 
             </div>
 
-            <div class="resolve">
+            <div class="resolve20_6">
+                <h3>Add new task</h3>
+                <input name="textTask" type="text" placeholder="Tasks text" id="textTask">
+
+                <label for="priorityTask">Priority</label>
+                <input name="priorityTask" type="number" placeholder="10" id="priorityTask">
+
+                <div class="buttons-block">
+
+                    <div class="buttons-block__sort">
+                        <button type="button" class="button btn_20_6 btn_add_task" id="sort">Sort</button>
+                        <select name="sortByName" id="sortByName" class="sortByName">
+                            <option value="ascending">Ascending</option>
+                            <option value="descending">In descending</option>
+                        </select>
+                    </div>
+                    <button type="button" class="button btn_20_6 btn_add_task" id="btn_add_task">Add</button>
+                </div>
+            </div>
+
+            <div class="resolve20_6">
+                <div class="resolve20_6__title">
+                    <h3>Your tasks</h3>
+                    <button type="button" class="button btn_delete-task" id="clearAll">Clear all</button>
+                </div>
+                <div id="tasks"></div>
 
             </div>
 

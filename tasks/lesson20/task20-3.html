@@ -8,6 +8,40 @@
     <title>Class: Task 20-3</title>
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="shortcut icon" href="../../img/js-file.png" type="image/x-icon">
+    <style>
+        .resolve {
+            padding: 25px;
+            column-gap: 25px;
+        }
+
+        .select {
+            outline: #ffffff 2px solid;
+            border-radius: 20px;
+            padding: 10px 25px;
+        }
+
+        .resault__block {
+            align-self: center;
+            text-align: center;
+            max-width: 400px;
+            justify-content: space-between;
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+
+        .car {
+
+            margin: 15px;
+            border: #ffffff 1px solid;
+            border-radius: 20px;
+            padding: 20px;
+
+            display: flex;
+            gap: 15px;
+            justify-content: space-around;
+
+        }
+    </style>
 </head>
 
 <body>
@@ -33,9 +67,7 @@
 
         <main class="main-task ">
             <h3>Class: Task 3</h3>
-
             <div class="lesson10">
-
                 <div class="block_with_task_ua task14">
                     <h2>Дано список автомобілів (марка, рік випуску, ціна). Сформувати елементи для фільтрування з
                         використанням випадаючого списку (контент цих випадаючих списків сформувати у залежності від
@@ -50,12 +82,31 @@
                         -down list (the content of these falling lists should be formed depending on the list
                         transmitted).</h2>
                 </div>
-
-
             </div>
 
             <div class="resolve">
+                <div class="carModel__block">
+                    <div>
+                        <select name="carModel" class="select" id="carModel">
+                            <option selected disabled>Select the model</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="carYear__block">
+                    <div>
+                        <select name="carYear" class="select" id="carYear">
+                            <option selected disabled>Choose a year</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
 
+            <div class="resault__block" id="resault__block">
+                <!-- <div class="car">
+                    <div>BMW</div>
+                    <div>2012</div>
+                    <div>12500 $</div>
+                </div> -->
             </div>
 
         </main>
