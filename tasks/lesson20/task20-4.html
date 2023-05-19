@@ -8,6 +8,63 @@
     <title>Class: Task 20-4</title>
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="shortcut icon" href="../../img/js-file.png" type="image/x-icon">
+    <style>
+        .resolve {
+            gap: 35px;
+            padding: 20px;
+        }
+
+        .wordUA,
+        .wordIT {
+            display: block;
+            width: 100%;
+        }
+
+        .words__ua button,
+        .words__it button {
+            outline: #fafafa 3px solid;
+            padding: 15px;
+            margin-bottom: 10px;
+            transition: all 0.3s ease 0s;
+        }
+
+        .words__ua button:hover,
+        .words__it button:hover {
+            outline: #00C4F0 3px solid;
+            background-color: #fafafa;
+            color: #000;
+            padding: 15px;
+            margin-bottom: 10px;
+        }
+
+        .selectedUA,
+        .selectedIT {
+            outline: #00C4F0 3px solid;
+            background-color: #fafafa;
+            color: #000;
+            padding: 15px;
+            margin-bottom: 10px;
+            width: 100%;
+        }
+
+        button:disabled {
+            outline: #5e5d5d 3px solid;
+            color: #5e5d5d;
+            padding: 15px;
+            margin-bottom: 10px;
+            transition: all 0.3s ease 0s;
+        }
+
+        h4 {
+            padding-bottom: 25px;
+        }
+
+        .resault-text {
+            padding: 20px;
+            font-size: 28px;
+            font-weight: 700;
+        }
+    </style>
 </head>
 
 <body>
@@ -58,7 +115,14 @@
 
             <div class="resolve">
 
+                <div class="words__ua">
+                    <h4>Українські слова</h4>
+                </div>
+                <div class="words__it">
+                    <h4>Italiani parole</h4>
+                </div>
             </div>
+            <div class="resault-text"></div>
 
         </main>
         <script src="../../js/lesson20/task20-4.js"></script>
