@@ -174,13 +174,7 @@ class createCards {
 
         }
     }
-
-    // returnValue() {
-    //     console.log('yes');
-    // }
 }
-
-
 
 let start = new createCards(wordsList)
 start.render()
