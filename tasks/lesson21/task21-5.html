@@ -20,6 +20,7 @@
             align-self: center;
             text-align: center;
             min-width: 50%;
+            display: flex;
         }
 
         .product {
@@ -69,6 +70,14 @@
             color: #080808;
             padding: 5px 15px;
         }
+
+        .form21-5 {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            gap: 10px;
+            align-items: center;
+        }
     </style>
 </head>
 
@@ -113,7 +122,31 @@
 
             </div>
 
-            <div class="resolve21">
+            <div class="resolve20_1">
+                <form action="post" class="form21-5">
+                    <label for="age">Age:</label>
+                    <input type="number" id="inp_age" name="age" required maxNumber="100" />
+
+                    <label for="height">Height (cm):</label>
+                    <input type="number" id="inp_height" name="height" required maxNumber="300" />
+
+                    <label for="weight">Weight (kg):</label>
+                    <input type="number" id="inp_weight" name="weight" required maxNumber="500" />
+
+                    <label for="wages">Wages:</label>
+                    <input type="number" id="inp_wages" name="wages" required maxNumber="500000" />
+
+                    <label for="experience">Experience:</label>
+                    <input type="number" id="inp_experience" name="experience" required maxNumber="70" />
+
+                    <label for="dprt_number">Department number (max: 10):</label>
+                    <input type="number" id="inp_dprt_number" name="dprt_number" required maxNumber="10" />
+
+                    <label for="srl_number">Serial number (6 number):</label>
+                    <input type="number" id="inp_srl_number" name="srl_number" required maxNumber="999999" />
+
+                    <button type="submit">Submit</button>
+                </form>
             </div>
 
         </main>
