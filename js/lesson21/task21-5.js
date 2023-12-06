@@ -7,3 +7,10 @@
 // На формі вводять 7 числових значень(вік, зріст, вага, заробітна плата, стаж, номер відділу, порядковий номер).
 
 // Додати подію обробки події click на форму і якщо клік на input, то автоматично замінювати значення його на 0.
+
+let selector = document.getElementById('form21')
+selector.onclick = function (event) {
+    if (event.target.value === '') {
+        event.target.value = 0;
+    }
+}
