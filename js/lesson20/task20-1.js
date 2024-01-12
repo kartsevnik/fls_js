@@ -147,6 +147,10 @@ class CardProduct {
             this.setAttribute("disabled", "")
         }
 
+        if (tempValue < quantity) {
+            parent.lastElementChild.removeAttribute("disabled")
+        }
+
         // считаем стоимость продукции
         let nextElementOfParent = parent.nextElementSibling
         let firstChild = nextElementOfParent.firstElementChild
