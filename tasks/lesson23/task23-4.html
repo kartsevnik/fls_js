@@ -9,8 +9,12 @@
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="shortcut icon" href="../../img/js-file.png" type="image/x-icon">
     <style>
-        .task14 p {
-            font-size: 24px;
+        .form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
         }
     </style>
 </head>
@@ -58,11 +62,21 @@
             </div>
 
             <div class="resolve22">
+                <h3>Enter the numbers to summarize the result</h3>
 
+                <form class="form">
+                    <label for="num1">Number 1:</label>
+                    <input id="num1" type="number" name="num1" />
+                    <label for="num2">Number 2:</label>
+                    <input id="num2" type="number" name="num2" />
+
+                    <input type="submit" value="Count" onclick="calculateResult(event)" preventDefault />
+                </form>
+                <div id="result"></div>
             </div>
 
         </main>
-        <script src="../../js/lesson22/task23-4.js"></script>
+        <script src="../../js/lesson23/task23-4.js"></script>
     </div>
 
 </body>

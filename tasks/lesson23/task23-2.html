@@ -9,8 +9,12 @@
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="shortcut icon" href="../../img/js-file.png" type="image/x-icon">
     <style>
-        .task14 p {
-            font-size: 24px;
+        .form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
         }
     </style>
 </head>
@@ -58,11 +62,20 @@
             </div>
 
             <div class="resolve22">
+                <h3>Enter the date of manufacture of the product and its expiration date</h3>
 
+                <form class="form">
+                    <label for="date">Product production date:</label>
+                    <input id="date" type="date" name="date" />
+                    <label for="expiration">Number of days of suitability:</label>
+                    <input id="expiration" type="number" name="expiration" />
+                    <input type="submit" value="Count" onclick="calculateExpiration(event)" preventDefault />
+                </form>
+                <div id="result"></div>
             </div>
 
         </main>
-        <script src="../../js/lesson22/task23-2.js"></script>
+        <script src="../../js/lesson23/task23-2.js"></script>
     </div>
 
 </body>
