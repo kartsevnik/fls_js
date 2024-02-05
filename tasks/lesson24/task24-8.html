@@ -5,16 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Date: Task 23-4</title>
+    <title>Regexp: Task 24-8</title>
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="shortcut icon" href="../../img/js-file.png" type="image/x-icon">
     <style>
-        .form {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 20px;
+        .task14 p {
+            font-size: 24px;
         }
     </style>
 </head>
@@ -27,7 +23,7 @@
                     <li class="menu__link"><a href="../../index.html"><img src="../../img/home.png" alt=""
                                 class="link-image"></a>
                     </li>
-                    <li class="menu__link"><a href="../../lesson23.html"><img src="../../img/back-button.png" alt=""
+                    <li class="menu__link"><a href="../../lesson24.html"><img src="../../img/back-button.png" alt=""
                                 class="link-image"></a>
                     </li>
                     <li class="menu__link"><a href="https://edu.fls.guru/js.html">Course JS from FLS</a></li>
@@ -41,42 +37,27 @@
         </header>
 
         <main class="main-task ">
-            <h3>Date: Task 4</h3>
+            <h3>Regexp: Task 8</h3>
 
             <div class="lesson10">
 
                 <div class="block_with_task_ua task14">
-
-                    <p>Задаємо користувачу задачу з додавання двох чисел. Визначити скільки секунд було використано для
-                        розв’язання задачі.</p>
+                    <p>Дано масив студентів (піб, курс, факультет). Підрахувати кількість різних факультетів, та
+                        кількість студентів кожного з курсів. </p>
                 </div>
 
                 <div class="block_with_task_en task14">
-                    <p>We ask the user the task of adding two numbers.Determine how many seconds were used to solve the
-                        problem.</p>
-
-
+                    <p>An array of students (name, course, faculty) is given.Calculate the number of different faculties
+                        and the number of students of each courses.</p>
                 </div>
-
-
             </div>
 
-            <div class="resolve22">
-                <h3>Enter the numbers to summarize the result</h3>
+            <div class="resolve24" id="result">
 
-                <form class="form">
-                    <label for="num1">Number 1:</label>
-                    <input id="num1" type="number" name="num1" />
-                    <label for="num2">Number 2:</label>
-                    <input id="num2" type="number" name="num2" />
-
-                    <input type="submit" value="Count" onclick="calculateResult(event)" preventDefault />
-                </form>
-                <div id="result"></div>
             </div>
 
         </main>
-        <script src="../../js/lesson23/task23-4.js"></script>
+        <script src="../../js/lesson24/task24-8.js"></script>
     </div>
 
 </body>
