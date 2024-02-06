@@ -9,8 +9,17 @@
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="shortcut icon" href="../../img/js-file.png" type="image/x-icon">
     <style>
-        .task14 p {
-            font-size: 24px;
+        #result {
+            /* background-color: aquamarine; */
+            width: 500px;
+            height: 200px;
+            align-self: center;
+            margin-top: 25px;
+        }
+
+        #btn {
+            border: #000 1px solid;
+            padding: 10px;
         }
     </style>
 </head>
@@ -44,7 +53,7 @@
                 <div class="block_with_task_ua task14">
 
                     <p>Користувач може змінювати колір фону, що вибирає користувач з використанням</p>
-                    <code><</code><code>input type="color"></code>
+                    <code>input type="color"></code>
                     <p>
                         Зберігати цей колір і відновлювати при наступному відкритті. Також зберігати і відображати
                         кількість змін протягом одного сеансу.
@@ -53,7 +62,7 @@
 
                 <div class="block_with_task_en task14">
                     <p>The user can change the background color that uses uses using</p>
-                    <code><</code><code>input type="color"></code>
+                    <code>input type="color"></code>
                     <p>
                         Store this color and restore at the next opening.Also store and display
                         The number of changes in one session.
@@ -62,7 +71,14 @@
 
 
             </div>
-
+            <div>
+                <label>
+                    Write color of background color
+                    <input type="color" id="background-color">
+                </label>
+                <button id="btn">Save color</button>
+                <p>Counter: <span id="counter">0</span></p>
+            </div>
             <div class="resolve24" id="result">
 
             </div>
