@@ -30,6 +30,5 @@ class PhoneNumber {
 
 }
 let phoneString = new PhoneNumber("0506531256")
-console.log(+phoneString);
 let str = "Hello! Your operator is " + String(phoneString)
 console.log(str);
